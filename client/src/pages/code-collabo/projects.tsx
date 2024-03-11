@@ -2,7 +2,7 @@ import { NextPageWithLayout } from '@/pages/_app';
 import { getCodeCollaboSubCommunityLayout } from '@/apps/code-collabo/components/AppPageLayout';
 
 import projects from '@/apps/code-collabo/styles/modules/projects.module.css';
-import useScreenDimensions from '@/apps/code-collabo/helpers/useScreenDimensions';
+import useScreenDimensions from '@/apps/code-collabo/hooks/useScreenDimensions';
 
 import FiltersComponent from '@/apps/code-collabo/components/Filters';
 

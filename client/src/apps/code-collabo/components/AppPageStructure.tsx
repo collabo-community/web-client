@@ -9,7 +9,7 @@ import PageHeadElement from '@/apps/shared/components/PageHeadElement';
 import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
 import main from '@/apps/code-collabo/styles/app.main';
 import lib from '@/apps/code-collabo/styles/app.lib';
-import  useScreenDimensions  from '../helpers/useScreenDimensions';
+import  useScreenDimensions  from '../hooks/useScreenDimensions';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -36,13 +36,27 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
       {/* TODO: Convert sidebar into a component - inject one here, and one after 1st button in header */}
       {/* Sidebar for Desktop & left side menu for mobile */}
-      <div className='app__menubar__nav'>
-        <div><b>LOGO HERE</b></div>
-        <nav>
-          <Link href='/code-collabo'>Overview</Link>
-          <Link href='/code-collabo/projects'>Projects</Link>
-          <Link href='/code-collabo/careers'>Careers</Link>
-          <Link href='/code-collabo/donate'>Donate</Link>
+      <div className='app__menubar__nav lib__flex-center-col'>
+        <Link className='app__logo' href='/code-collabo'>
+          <Image src='/code-collabo/logo.png' alt='logo' width={207} height={55} />
+        </Link>
+        <nav className='app__menubar__nav__items lib__flex-space-btw-col'>
+          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo'>
+            <Image src='/code-collabo/dashboard.png' alt='donate-icon' width='17' height='15' />
+            Overview
+          </Link>
+          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/projects'>
+            <Image src='/code-collabo/project-icon.png' alt='project-icon' width='17' height='15' />
+            Projects
+          </Link>
+          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/careers'>
+            <Image src='/code-collabo/career-icon.png' alt='career-icon' width='17' height='15' />
+            Careers
+          </Link>
+          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/donate'>
+            <Image src='/code-collabo/donate.png' alt='donate-icon' width='17' height='15' />
+            Donate
+          </Link>
         </nav>
       </div>
 

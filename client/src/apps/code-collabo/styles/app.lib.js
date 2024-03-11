@@ -53,6 +53,45 @@ export default css.global`
         align-items: center;
     }
 
+    // ----------------------
+    .lib__flex-center-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lib__flex-center-col-sm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // ----------------------
+    .lib__flex-space-btw-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .lib__flex-space-btw-col__sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // ----------------------
+    .lib__flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lib__flex-center__sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
 
     // --- MEDIUM SCREENS

@@ -22,6 +22,24 @@ export default css.global`
 
     }
 
+    .app__logo {
+        margin-bottom: 40px;
+    }
+
+    .app__menubar__nav__link {
+        text-decoration: none;
+        background: #f9f9f9;
+        padding: 15px 0px;
+        gap: 24px;
+        border-radius: 10px;
+    }
+
+    .app__menubar__nav__items {
+        gap: 10px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
     app__page-title {
 
     }
@@ -66,6 +84,19 @@ export default css.global`
 
         .app__menubar__nav {
             border-right: 1px solid var(--color-neutral-200);
+        }
+
+        .app__logo {
+            margin-bottom: 82px;
+        }
+
+        .app__menubar__nav__link {
+            padding: 15px 0px;
+            gap: 30px;
+        }
+
+        .app__menubar__nav__items {
+            gap: 20px
         }
 
         .app__content-area {
