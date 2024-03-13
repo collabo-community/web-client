@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { getPage } from '@/apps/shared/helpers/meta';
@@ -20,6 +20,11 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
   const  { isMobile }  = useScreenDimensions();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
   return (
     <>
       <PageHeadElement
@@ -36,24 +41,25 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
       {/* TODO: Convert sidebar into a component - inject one here, and one after 1st button in header */}
       {/* Sidebar for Desktop & left side menu for mobile */}
-      <div className='app__menubar__nav lib__flex-center-col'>
-        <Link className='app__logo' href='/code-collabo'>
+      <div className={`app__menubar__nav lib__flex-center-col ${isMobile ? 'app__menubar__nav__mobile' : ''} ${isSidebarOpen ? 'open' : ''}`}>
+        <Link className='app__logo' onClick={toggleSidebar} href='/code-collabo'>
+          {isMobile && <div >X</div>}
           <Image src='/code-collabo/logo.png' alt='logo' width={207} height={55} />
         </Link>
         <nav className='app__menubar__nav__items lib__flex-space-btw-col'>
-          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo'>
+          <Link className='app__menubar__nav__link lib__flex-center' onClick={toggleSidebar} href='/code-collabo'>
             <Image src='/code-collabo/dashboard.png' alt='donate-icon' width='17' height='15' />
             Overview
           </Link>
-          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/projects'>
+          <Link className='app__menubar__nav__link lib__flex-center' onClick={toggleSidebar} href='/code-collabo/projects'>
             <Image src='/code-collabo/project-icon.png' alt='project-icon' width='17' height='15' />
             Projects
           </Link>
-          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/careers'>
+          <Link className='app__menubar__nav__link lib__flex-center' onClick={toggleSidebar} href='/code-collabo/careers'>
             <Image src='/code-collabo/career-icon.png' alt='career-icon' width='17' height='15' />
             Careers
           </Link>
-          <Link className='app__menubar__nav__link lib__flex-center' href='/code-collabo/donate'>
+          <Link className='app__menubar__nav__link lib__flex-center' onClick={toggleSidebar} href='/code-collabo/donate'>
             <Image src='/code-collabo/donate.png' alt='donate-icon' width='17' height='15' />
             Donate
           </Link>
@@ -64,7 +70,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <div  className='app__content-area'>
         <header className='app__header lib__flex-space-btw__sm'>
           { isMobile && (
-            <button className='app__mobile-menu-btns'>
+            <button className='app__mobile-menu-btns' onClick={toggleSidebar}>
               <Image src='/code-collabo/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
             </button>
           )}

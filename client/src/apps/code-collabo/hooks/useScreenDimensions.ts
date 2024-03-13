@@ -16,7 +16,7 @@ const useScreenDimensions = (): ScreenDimensions => {
     const handleResize = () => {
       const newScreenWidth = window.innerWidth;
       setScreenDimensions({
-        isMobile: newScreenWidth <= 600,
+        isMobile: newScreenWidth < 600,
         screenWidth: newScreenWidth,
       });
     };

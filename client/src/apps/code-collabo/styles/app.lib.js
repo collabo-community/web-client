@@ -60,7 +60,7 @@ export default css.global`
         align-items: center;
     }
 
-    .lib__flex-center-col-sm {
+    .lib__flex-center-col__sm {
         display: flex;
         flex-direction: column;
         align-items: center;

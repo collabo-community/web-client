@@ -16,28 +16,42 @@ export default css.global`
     #__next {
         // --- spacing ontop & below page
         padding: 30px 0;
+        position: relative;
     }
 
     .app__menubar__nav {
 
     }
 
-    .app__logo {
-        margin-bottom: 40px;
+    .app__menubar__nav__mobile {
+        position: fixed;
+        top: 0;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+        height: 100%;
+        background: #e3e3e3;
     }
 
-    .app__menubar__nav__link {
-        text-decoration: none;
-        background: #f9f9f9;
-        padding: 15px 0px;
-        gap: 24px;
-        border-radius: 10px;
+    .app__menubar__nav__mobile.open {
+      transform: translateX(-100%); /* Bring sidebar in view */
+    }
+
+    .app__logo {
+        margin: 100px 0px 50px;
     }
 
     .app__menubar__nav__items {
+        margin: 0 auto;
         gap: 10px;
-        width: 100%;
-        padding: 0 20px;
+        width: calc(100% - 60px);
+    }
+
+    .app__menubar__nav__link {
+      text-decoration: none;
+      background: #f9f9f9;
+      padding: 15px 0px;
+      gap: 24px;
+      border-radius: 10px;
     }
 
     app__page-title {
@@ -87,16 +101,16 @@ export default css.global`
         }
 
         .app__logo {
-            margin-bottom: 82px;
+            margin: 12px 0px 82px 0px;
+        }
+        
+        .app__menubar__nav__items {
+            gap: 10px
         }
 
         .app__menubar__nav__link {
-            padding: 15px 0px;
+            padding: 16px 0px;
             gap: 30px;
-        }
-
-        .app__menubar__nav__items {
-            gap: 20px
         }
 
         .app__content-area {
