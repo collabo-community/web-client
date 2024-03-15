@@ -8,6 +8,14 @@
     width: calc(100% - 30px);
 }
 
+.selectElemMobile {
+  padding: 13px 26px;
+  background: var(--color-neutral-100);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 /* LARGE SCREENS */
 @media screen and (min-width: 600px) {
     .cardsArea {

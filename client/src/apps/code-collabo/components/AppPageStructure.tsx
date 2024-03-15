@@ -5,6 +5,7 @@ import { getPage } from '@/apps/shared/helpers/meta';
 import { appInfo, urlStart } from '@/apps/code-collabo/helpers/appInfo';
 
 import PageHeadElement from '@/apps/shared/components/PageHeadElement';
+import projects from '@/apps/code-collabo/styles/modules/projects.module.css';
 
 import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
 import main from '@/apps/code-collabo/styles/app.main';
@@ -13,6 +14,7 @@ import  useScreenDimensions  from '../hooks/useScreenDimensions';
 import Image from 'next/image';
 import Link from 'next/link';
 import useToggle from '../hooks/useToggle';
+import FiltersComponent from './Filters';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -21,7 +23,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
   const  { isMobile }  = useScreenDimensions();
-  const { isOpen, toggle } = useToggle(true);
+  const { isOpen, toggle, toggleFilter, isFilterOpen } = useToggle();
 
   return (
     <>
@@ -74,14 +76,21 @@ export default function PageStructure({ children }: { children: ReactNode }) {
           )}
           <h2 className='app__page-title'>{thisPage}</h2>
           { isMobile && (
-            <button className='app__mobile-menu-btns'>
+            <button className='app__mobile-menu-btns' onClick={toggleFilter}>
               <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
             </button>
           )}
         </header>
 
         {/* TODO: Make a filters component - inject one here, and one inside projects page */}
-
+        { isFilterOpen && isMobile && (
+          <div className='app__project-filter-container open'>
+            <div className='lib__flex-center-col app__project-filter'>
+              <FiltersComponent className={projects.selectElemMobile} isFilterOpen={isFilterOpen} toggleFilter={toggleFilter}/>
+            </div>
+          </div>
+        )
+        }
         <main>
           { children }
         </main>

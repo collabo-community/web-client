@@ -72,6 +72,26 @@ export default css.global`
         padding: 16px;
     }
 
+    .app__project-filter-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+        height: 100%;
+        background: #e3e3e3;
+    }
+
+    .app__project-filter-container.open {
+      transform: translateX(0%); /* Bring Filter in view */
+    }
+
+    .app__project-filter {
+        padding: 67px 0px 20px 0px;
+        margin:0 auto;
+        width: 240px;
+    }
+
 
     // --- LARGE SCREENS
     @media screen and (min-width: 600px) {

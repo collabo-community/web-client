@@ -1,14 +1,21 @@
 import { useState } from 'react';
 
-export default function useToggle(initialState = true) {
-  const [isOpen, setIsOpen] = useState(initialState);
+export default function useToggle() {
+  const [isOpen, setIsOpen] = useState(true);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleFilter = () => {
+    setIsFilterOpen(!isFilterOpen);
+  };
+
   return {
     isOpen,
-    toggle
+    toggle,
+    isFilterOpen,
+    toggleFilter
   };
 }
