@@ -14,30 +14,39 @@ export default css.global`
     }
 
     #__next {
-        // --- spacing ontop & below page
+        // ---belongs to library: page structure
+        display: block;
+    
+        // ---specific to our app: spacing ontop & below page
         padding: 30px 0;
-        position: relative;
     }
 
     .app__menubar__nav {
-
-    }
-
-    .app__menubar__nav__mobile {
+        // ---belongs to library
         position: fixed;
+
+        // ---belongs to library: this is only needed for when position is fixed
         top: 0;
-        margin: 0 auto;
-        width: calc(100% - 60px);
+        left: 0;
+
+        // ---specific to our app
+        background: var(--color-shade-white);
+        width: 300px;
         height: 100%;
-        background: #e3e3e3;
     }
 
-    .app__menubar__nav__mobile.open {
-      transform: translateX(-100%); /* Bring sidebar in view */
+    .app__menubar__toggle__close {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: 50px;
+        right: 13px;
     }
 
     .app__logo {
-        margin: 100px 0px 50px;
+        display: block;
+        margin: 100px auto 50px auto;
+        width: fit-content;
     }
 
     .app__menubar__nav__items {
@@ -96,15 +105,15 @@ export default css.global`
     // --- LARGE SCREENS
     @media screen and (min-width: 600px) {
         #__next {
-            // --- spacing ontop & below page
+            // ---specific to our app: spacing ontop & below page
             padding: 50px 0 42px 0;
     
-            // --- page structure
+            // ---belongs to library: page structure [---specific to our app: column/row values]
             display: grid;
             grid-template-columns: 360px 1fr;
             grid-template-rows: 1fr;
-    
-            // --- set height for structure to work
+
+            // ---belongs to library: set height for structure to work
             height: inherit;
         }
 
@@ -117,11 +126,16 @@ export default css.global`
         }
 
         .app__menubar__nav {
+            // ---specific to our app
             border-right: 1px solid var(--color-neutral-200);
+
+            // ---belongs to library: [---specific to our app: width value]
+            position: static;
+            width: inherit;
         }
 
         .app__logo {
-            margin: 12px 0px 82px 0px;
+            margin: 12px auto 82px auto;
         }
         
         .app__menubar__nav__items {

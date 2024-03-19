@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 interface ScreenDimensions {
   isMobile: boolean;
+  isDesktop: boolean;
   screenWidth: number;
 }
 
@@ -9,14 +10,17 @@ interface ScreenDimensions {
 const useScreenDimensions = (): ScreenDimensions => {
   const [screenDimensions, setScreenDimensions] = useState<ScreenDimensions>({
     isMobile: false,
+    isDesktop: false,
     screenWidth:typeof window !== 'undefined' ? window.innerWidth : 0,
   });
 
   useEffect(() => {
     const handleResize = () => {
       const newScreenWidth = window.innerWidth;
+      const mobile = newScreenWidth <= 600;
       setScreenDimensions({
-        isMobile: newScreenWidth <= 600,
+        isMobile: mobile,
+        isDesktop: !mobile,
         screenWidth: newScreenWidth,
       });
     };

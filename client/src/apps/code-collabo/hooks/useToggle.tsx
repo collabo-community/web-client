@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 export default function useToggle() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   const toggleFilter = () => {
@@ -13,8 +13,8 @@ export default function useToggle() {
   };
 
   return {
-    isOpen,
-    toggle,
+    isSidebarOpen,
+    toggleSidebar,
     isFilterOpen,
     toggleFilter
   };
