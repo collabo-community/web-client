@@ -45,10 +45,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
       {/* Large devices - sidebar */}
       { isDesktop &&
-        <SideBarComponent
-          isSidebarOpen={isSidebarOpen}
-          toggleSidebar={toggleSidebar}
-        />
+        <SideBarComponent toggleSidebar={toggleSidebar}/>
       }
 
       {/* Page Content area for Desktop & Whole page for mobile */}
@@ -56,16 +53,11 @@ export default function PageStructure({ children }: { children: ReactNode }) {
         <header className='app__header lib__flex-space-btw__sm'>
           {/* TODO: state management [to prevent nesting/repetition of props too] */}
           <HamburgerToggleBtnComponent
-            onlyShowInDOMwhenSideBarClosed={isSidebarOpen}
-            isSidebarOpen={isSidebarOpen}
             toggleSidebar={toggleSidebar}
           />
           {/* Smaller devices - sidebar */}
           { isMobileSidebarToggleTrue &&
-            <SideBarComponent
-              isSidebarOpen={isSidebarOpen}
-              toggleSidebar={toggleSidebar}
-            />
+            <SideBarComponent toggleSidebar={toggleSidebar}/>
           }
           <h2 className='app__page-title'>{thisPage}</h2>
           { isMobile && (

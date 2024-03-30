@@ -4,14 +4,14 @@ import Image from 'next/image';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
 
-export default function SideBarComponent({ toggleSidebar, isSidebarOpen }: { toggleSidebar?: () => void; isSidebarOpen?: boolean }) {
+export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
   const { isDesktop }  = useScreenDimensions();
   return (
     <>
       {/* Sidebar for DESKTOP & left side menu for MOBILE */}
       <div className='app__menubar__nav'>
         <HamburgerToggleBtnComponent
-          isSidebarOpen={isSidebarOpen}
+          isCloseBtn={true}
           toggleSidebar={toggleSidebar}
         />
         <Link className='app__logo' href='/code-collabo'>
