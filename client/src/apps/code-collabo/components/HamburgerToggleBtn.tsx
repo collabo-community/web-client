@@ -8,7 +8,7 @@ export default function HamburgerToggleBtnComponent({ toggleSidebar, isCloseBtn 
   // Remove from DOM if on desktop
   if (isDesktop) return null;
 
-  // We want to keep harmburger button(s) in the DOM always, to keep the shape of the page whether sidebar is open or not
+  // We want to keep the "open" harmburger button in the DOM always, to keep the shape of the page whether sidebar is open or not
   // The "isCloseBtn" prop/style for singling out close button helps achieve this
   if (isCloseBtn) {
     return (
