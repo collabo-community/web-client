@@ -2,14 +2,18 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useScreenDimensions from '../hooks/useScreenDimensions';
+import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
 
-export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void }) {
-  const { isMobile, isDesktop }  = useScreenDimensions();
+export default function SideBarComponent({ toggleSidebar, isSidebarOpen }: { toggleSidebar?: () => void; isSidebarOpen?: boolean }) {
+  const { isDesktop }  = useScreenDimensions();
   return (
     <>
       {/* Sidebar for DESKTOP & left side menu for MOBILE */}
       <div className='app__menubar__nav'>
-        {isMobile && <button className='app__menubar__toggle__close' onClick={toggleSidebar}>{'<'}</button>}
+        <HamburgerToggleBtnComponent
+          isSidebarOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+        />
         <Link className='app__logo' href='/code-collabo'>
           <Image src='/code-collabo/logo.png' alt='logo' width={isDesktop ? 207 : 172} height={isDesktop ? 55 : 40} />
         </Link>

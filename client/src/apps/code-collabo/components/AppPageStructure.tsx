@@ -15,6 +15,7 @@ import Image from 'next/image';
 import useToggle from '../hooks/useToggle';
 import FiltersComponent from './Filters';
 import SideBarComponent from './SideBar';
+import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -43,19 +44,30 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <style jsx global>{ main }</style>
 
       {/* Large devices - sidebar */}
-      { isDesktop && <SideBarComponent />}
+      { isDesktop &&
+        <SideBarComponent
+          isSidebarOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+        />
+      }
 
       {/* Page Content area for Desktop & Whole page for mobile */}
       <div  className='app__content-area'>
         <header className='app__header lib__flex-space-btw__sm'>
-          { isMobile && (
-            <button className='app__mobile-menu-btns' onClick={toggleSidebar}>
-              <Image src='/code-collabo/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
-            </button>
-          )}
-          <h2 className='app__page-title'>{thisPage}</h2>
+          {/* TODO: state management [to prevent nesting/repetition of props too] */}
+          <HamburgerToggleBtnComponent
+            onlyShowInDOMwhenSideBarClosed={isSidebarOpen}
+            isSidebarOpen={isSidebarOpen}
+            toggleSidebar={toggleSidebar}
+          />
           {/* Smaller devices - sidebar */}
-          { isMobileSidebarToggleTrue && <SideBarComponent toggleSidebar={toggleSidebar} />}
+          { isMobileSidebarToggleTrue &&
+            <SideBarComponent
+              isSidebarOpen={isSidebarOpen}
+              toggleSidebar={toggleSidebar}
+            />
+          }
+          <h2 className='app__page-title'>{thisPage}</h2>
           { isMobile && (
             <button className='app__mobile-menu-btns' onClick={toggleFilter}>
               <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
