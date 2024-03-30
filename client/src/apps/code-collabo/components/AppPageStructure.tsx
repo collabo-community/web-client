@@ -23,6 +23,9 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
+  // Is there any other way we can get to check projects page???
+  const isProjectPage = pathname.includes('projects');
+
   const  { isMobile, isDesktop }  = useScreenDimensions();
   const { isSidebarOpen, toggleSidebar, toggleFilter, isFilterOpen } = useToggle();
 
@@ -60,22 +63,26 @@ export default function PageStructure({ children }: { children: ReactNode }) {
             <SideBarComponent toggleSidebar={toggleSidebar}/>
           }
           <h2 className='app__page-title'>{thisPage}</h2>
-          { isMobile && (
-            <button className='app__mobile-menu-btns' onClick={toggleFilter}>
-              <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
-            </button>
-          )}
-        </header>
+          {isProjectPage &&
+            <>
+              { isMobile && (
+                <button className='app__mobile-menu-btns' onClick={toggleFilter}>
+                  <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
+                </button>
+              )}
 
-        {/* TODO: Make a filters component - inject one here, and one inside projects page */}
-        { isFilterOpen && isMobile && (
-          <div className='app__project-filter-container open'>
-            <div className='lib__flex-center-col app__project-filter'>
-              <FiltersComponent className={projects.selectElemMobile} isFilterOpen={isFilterOpen} toggleFilter={toggleFilter}/>
-            </div>
-          </div>
-        )
-        }
+              {/* TODO: Make a filters component - inject one here, and one inside projects page */}
+              { isFilterOpen && isMobile && (
+                <div className='app__project-filter-container open'>
+                  <div className='lib__flex-center-col app__project-filter'>
+                    <FiltersComponent className={projects.selectElemMobile} isFilterOpen={isFilterOpen} toggleFilter={toggleFilter}/>
+                  </div>
+                </div>
+              )
+              }
+            </>
+          }
+        </header>
         <main>
           { children }
         </main>
