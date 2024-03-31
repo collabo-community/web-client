@@ -17,9 +17,7 @@ export default function FiltersSideBarComponent({ isFilterOpen, toggleFilter }: 
             isCloseBtn={true}
             toggleFilter={toggleFilter}
           />
-          <div className='app__side-menubar__nav lib__flex-space-btw-col'>
-            <FiltersComponent />
-          </div>
+          <FiltersComponent />
         </div>
       </>
     );

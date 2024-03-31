@@ -3,23 +3,32 @@
 /* Imported as projects into the projects page when we need it */
 
 
-.cardsArea {
+.side_menubar__filter {
     margin: 0 auto;
-    width: calc(100% - 30px);
+    gap: 20px;
+    width: calc(100% - 100px);
+
+    /* Stack content on top of each other */
+    display: flex;
+    flex-direction: column;
 }
 
-.selectElemMobile {
-  padding: 13px 26px;
-  background: var(--color-neutral-100);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 100%;
+.select_elem {
+    padding: 13px 26px;
+    background: var(--color-neutral-100);
+    border-radius: 10px;
+    width: 100%;
 }
 
 .filterbyText {
-    display: block;
-    margin: 70px auto 20px auto;
-    width: fit-content;
+      display: block;
+      margin: 70px auto 20px auto;
+      width: fit-content;
+}
+
+.cardsArea {
+    margin: 0 auto;
+    width: calc(100% - 30px);
 }
 
 /* LARGE SCREENS */
@@ -35,11 +44,10 @@
     }
 
     /* Temporary styles? */
-    .selectElem {
+    .select_elem {
         padding: 13px 26px;
-        background: var(--color-neutral-100);
         margin-left: 10px;
-        border-radius: 10px;
+        width: unset;
     }
 }
 
