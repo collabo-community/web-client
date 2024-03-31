@@ -12,7 +12,7 @@ const ProjectsPageCodeCollabo: NextPageWithLayout = () => {
     <>
       { !isMobile && (
         <div className='lib__flex-right__md'>
-          <FiltersComponent className={projects.selectElem} />
+          <FiltersComponent />
         </div>
       )}
       <div className={projects.cardsArea}>

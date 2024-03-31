@@ -5,17 +5,16 @@ import { getPage } from '@/apps/shared/helpers/meta';
 import { appInfo, urlStart } from '@/apps/code-collabo/helpers/appInfo';
 
 import PageHeadElement from '@/apps/shared/components/PageHeadElement';
-import projects from '@/apps/code-collabo/styles/modules/projects.module.css';
 
 import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
 import main from '@/apps/code-collabo/styles/app.main';
 import lib from '@/apps/code-collabo/styles/app.lib';
 import  useScreenDimensions  from '../hooks/useScreenDimensions';
-import Image from 'next/image';
 import useToggle from '../hooks/useToggle';
-import FiltersComponent from './Filters';
 import SideBarComponent from './SideBar';
 import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
+import FiltersSideBarComponent from './FiltersSideBar';
+import FilterHamburgerToggleBtnComponent from './FilterHamburgerToggleBtn';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -31,6 +30,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
   // Used to show or hide sidebar (only on mobile)
   const isMobileSidebarToggleTrue = isMobile && isSidebarOpen;
+  const isMobileFilterSidebarToggleTrue = isMobile && isFilterOpen;
 
   return (
     <>
@@ -63,21 +63,16 @@ export default function PageStructure({ children }: { children: ReactNode }) {
             <SideBarComponent toggleSidebar={toggleSidebar}/>
           }
           <h2 className='app__page-title'>{thisPage}</h2>
+
+          {/* Reminder to have a "Mobile Filter" component later, where you can return it or not if isProjectPage */}
           {isProjectPage &&
             <>
-              { isMobile && (
-                <button className='app__mobile-menu-btns' onClick={toggleFilter}>
-                  <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
-                </button>
-              )}
+              <FilterHamburgerToggleBtnComponent toggleFilter={toggleFilter} />
 
-              {/* TODO: Make a filters component - inject one here, and one inside projects page */}
-              { isFilterOpen && isMobile && (
-                <div className='app__project-filter-container open'>
-                  <div className='lib__flex-center-col app__project-filter'>
-                    <FiltersComponent className={projects.selectElemMobile} isFilterOpen={isFilterOpen} toggleFilter={toggleFilter}/>
-                  </div>
-                </div>
+              { isMobileFilterSidebarToggleTrue && (
+                <FiltersSideBarComponent
+                  toggleFilter={toggleFilter}
+                />
               )
               }
             </>

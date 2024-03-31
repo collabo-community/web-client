@@ -9,7 +9,7 @@ export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: ()
   return (
     <>
       {/* Sidebar for DESKTOP & left side menu for MOBILE */}
-      <div className='app__menubar__nav'>
+      <div className='app__menubar__nav lib__position-left'>
         <HamburgerToggleBtnComponent
           isCloseBtn={true}
           toggleSidebar={toggleSidebar}

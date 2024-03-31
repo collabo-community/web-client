@@ -5,6 +5,24 @@ import css from 'styled-jsx/css';
 
 export default css.global`
 
+    .lib__position-left {
+        left: 0;
+    }
+
+    .lib__position-right {
+        right: 0;
+    }
+
+    .lib__position-toggle-right {
+        right: 13px;
+    }
+
+    .lib__position-toggle-left {
+        left: 13px;
+    }
+
+    //---------------------
+
     .lib__margin-auto {
         margin: 0 auto;
     }

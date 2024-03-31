@@ -6,7 +6,7 @@ import css from 'styled-jsx/css';
 export default css.global`
 
     // --- Description: Styles that affect all Code Collabo sub-community pages
-    
+
     // --- SMALL SCREENS
     body {
         background: var(--color-shade-white);
@@ -27,7 +27,6 @@ export default css.global`
 
         // ---belongs to library: this is only needed for when position is fixed
         top: 0;
-        left: 0;
 
         // ---specific to our app
         background: var(--color-shade-white);
@@ -40,7 +39,6 @@ export default css.global`
         height: 56px;
         position: absolute;
         top: 50px;
-        right: 13px;
     }
 
     .app__logo {
@@ -79,26 +77,6 @@ export default css.global`
     .app__mobile-menu-btns {
         border-radius: 50%;
         padding: 16px;
-    }
-
-    .app__project-filter-container {
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin: 0 auto;
-        width: calc(100% - 60px);
-        height: 100%;
-        background: #e3e3e3;
-    }
-
-    .app__project-filter-container.open {
-      transform: translateX(0%); /* Bring Filter in view */
-    }
-
-    .app__project-filter {
-        padding: 67px 0px 20px 0px;
-        margin:0 auto;
-        width: 240px;
     }
 
 

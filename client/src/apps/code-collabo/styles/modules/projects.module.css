@@ -16,6 +16,12 @@
   width: 100%;
 }
 
+.filterbyText {
+    display: block;
+    margin: 70px auto 20px auto;
+    width: fit-content;
+}
+
 /* LARGE SCREENS */
 @media screen and (min-width: 600px) {
     .cardsArea {
