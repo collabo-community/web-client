@@ -9,11 +9,12 @@ import PageHeadElement from '@/apps/shared/components/PageHeadElement';
 import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
 import main from '@/apps/code-collabo/styles/app.main';
 import lib from '@/apps/code-collabo/styles/app.lib';
-import  useScreenDimensions  from '../hooks/useScreenDimensions';
+
 import useToggle from '../hooks/useToggle';
-import SideBarComponent from './SideBar';
+
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 import SM_Screen_FilterComponent from './SM_Screen_Filter';
+import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from './SideBar';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -21,11 +22,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
-  const  { isMobile, isDesktop }  = useScreenDimensions();
-  const { isSidebarOpen, toggleSidebar } = useToggle();
-
-  // Used to show or hide sidebar (only on mobile)
-  const isMobileSidebarToggleTrue = isMobile && isSidebarOpen;
+  const { toggleSidebar, isSidebarOpen } = useToggle();
 
   return (
     <>
@@ -41,10 +38,9 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <style jsx global>{ lib }</style>
       <style jsx global>{ main }</style>
 
-      {/* Large devices - sidebar */}
-      { isDesktop &&
-        <SideBarComponent toggleSidebar={toggleSidebar}/>
-      }
+      <MidAndUp_Screens_SideBarComponent
+        toggleSidebar={toggleSidebar}
+      />
 
       {/* Page Content area for Desktop & Whole page for mobile */}
       <div  className='app__content-area'>
@@ -53,10 +49,10 @@ export default function PageStructure({ children }: { children: ReactNode }) {
           <SM_Screen_HamburgerComponent
             toggleSidebar={toggleSidebar}
           />
-          {/* Smaller devices - sidebar */}
-          { isMobileSidebarToggleTrue &&
-            <SideBarComponent toggleSidebar={toggleSidebar}/>
-          }
+          <SM_Screen_SideBarComponent
+            isSidebarOpen={isSidebarOpen}
+            toggleSidebar={toggleSidebar}
+          />
           <h2 className='app__page-title'>{thisPage}</h2>
           <SM_Screen_FilterComponent pathname={pathname}/>
         </header>

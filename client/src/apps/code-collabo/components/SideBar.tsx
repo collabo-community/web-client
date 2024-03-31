@@ -4,7 +4,7 @@ import Image from 'next/image';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 
-export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
+function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
   const { isDesktop }  = useScreenDimensions();
   return (
     <>
@@ -39,3 +39,31 @@ export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: ()
     </>
   );
 }
+
+
+export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { isSidebarOpen: boolean; toggleSidebar?: () => void; }) => {
+  const { isMobile }  = useScreenDimensions();
+  // Used to show or hide sidebar (only on mobile)
+  const isMobileSidebarToggleTrue = isMobile && isSidebarOpen;
+
+  // Display sm_screen sidebar in this case
+  if (isMobileSidebarToggleTrue) {
+    return <SideBarComponent toggleSidebar={toggleSidebar}/>;
+  }
+
+  // Otherwise, don't display or show in DOM
+  return null;
+};
+
+
+export const MidAndUp_Screens_SideBarComponent = ({ toggleSidebar }: { toggleSidebar?: () => void; }) => {
+  const { isDesktop }  = useScreenDimensions();
+
+  // Display larger sidebar in this case
+  if (isDesktop) {
+    return <SideBarComponent toggleSidebar={toggleSidebar}/>;
+  }
+
+  // Otherwise, don't display or show in DOM
+  return null;
+};
