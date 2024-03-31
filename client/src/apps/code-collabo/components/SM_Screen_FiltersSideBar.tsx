@@ -5,8 +5,8 @@ import FiltersComponent from './Filters';
 import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
 
 export default function SM_Screen_FiltersSideBarComponent({ isFilterOpen, toggleFilter }: { isFilterOpen: boolean; toggleFilter?: () => void  }) {
-  const  { isMobile }  = useScreenDimensions();
-  const isMobileFilterSidebarToggleTrue = isMobile && isFilterOpen;
+  const  { is_sm_screen }  = useScreenDimensions();
+  const isMobileFilterSidebarToggleTrue = is_sm_screen && isFilterOpen;
 
   // Filter sidebar should show and open for mobile when filter is open
   if (isMobileFilterSidebarToggleTrue) {

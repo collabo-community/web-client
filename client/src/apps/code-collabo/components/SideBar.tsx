@@ -5,7 +5,7 @@ import useScreenDimensions from '../hooks/useScreenDimensions';
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 
 function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
-  const { isDesktop }  = useScreenDimensions();
+  const { is_midAndUp_screens }  = useScreenDimensions();
   return (
     <>
       {/* Sidebar for DESKTOP & left side menu for MOBILE */}
@@ -15,7 +15,7 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
           toggleSidebar={toggleSidebar}
         />
         <Link className='app__logo' href='/code-collabo'>
-          <Image src='/code-collabo/logo.png' alt='logo' width={isDesktop ? 207 : 172} height={isDesktop ? 55 : 40} />
+          <Image src='/code-collabo/logo.png' alt='logo' width={is_midAndUp_screens ? 207 : 172} height={is_midAndUp_screens ? 55 : 40} />
         </Link>
         <nav className='app__side-menubar__nav lib__flex-space-btw-col'>
           <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/code-collabo'>
@@ -42,9 +42,9 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
 
 
 export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { isSidebarOpen: boolean; toggleSidebar?: () => void; }) => {
-  const { isMobile }  = useScreenDimensions();
+  const { is_sm_screen }  = useScreenDimensions();
   // Used to show or hide sidebar (only on mobile)
-  const isMobileSidebarToggleTrue = isMobile && isSidebarOpen;
+  const isMobileSidebarToggleTrue = is_sm_screen && isSidebarOpen;
 
   // Display sm_screen sidebar in this case
   if (isMobileSidebarToggleTrue) {
@@ -57,10 +57,10 @@ export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { i
 
 
 export const MidAndUp_Screens_SideBarComponent = ({ toggleSidebar }: { toggleSidebar?: () => void; }) => {
-  const { isDesktop }  = useScreenDimensions();
+  const { is_midAndUp_screens }  = useScreenDimensions();
 
   // Display larger sidebar in this case
-  if (isDesktop) {
+  if (is_midAndUp_screens) {
     return <SideBarComponent toggleSidebar={toggleSidebar}/>;
   }
 

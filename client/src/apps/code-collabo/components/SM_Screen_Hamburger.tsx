@@ -3,10 +3,10 @@ import useScreenDimensions from '../hooks/useScreenDimensions';
 import Image from 'next/image';
 
 export default function SM_Screen_HamburgerComponent({ toggleSidebar, isCloseBtn }: { toggleSidebar?: () => void; isCloseBtn?: boolean; }) {
-  const  { isDesktop }  = useScreenDimensions();
+  const  { is_midAndUp_screens }  = useScreenDimensions();
   
   // Remove from DOM if on desktop
-  if (isDesktop) return null;
+  if (is_midAndUp_screens) return null;
 
   // We want to keep the "open" harmburger button in the DOM always, to keep the shape of the page whether sidebar is open or not
   // The "isCloseBtn" prop/style for singling out close button helps achieve this
