@@ -12,12 +12,12 @@ export default function FiltersSideBarComponent({ isFilterOpen, toggleFilter }: 
   if (isMobileFilterSidebarToggleTrue) {
     return (
       <>
-        <div className='app__menubar__nav lib__position-right'>
+        <div className='app__side-menubar lib__position-right'>
           <FilterHamburgerToggleBtnComponent
             isCloseBtn={true}
             toggleFilter={toggleFilter}
           />
-          <div className='app__menubar__nav__items lib__flex-space-btw-col'>
+          <div className='app__side-menubar__nav lib__flex-space-btw-col'>
             <FiltersComponent />
           </div>
         </div>

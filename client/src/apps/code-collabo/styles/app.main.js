@@ -21,7 +21,7 @@ export default css.global`
         padding: 30px 0;
     }
 
-    .app__menubar__nav {
+    .app__side-menubar {
         // ---belongs to library
         position: fixed;
 
@@ -47,13 +47,13 @@ export default css.global`
         width: fit-content;
     }
 
-    .app__menubar__nav__items {
+    .app__side-menubar__nav {
         margin: 0 auto;
         gap: 10px;
         width: calc(100% - 60px);
     }
 
-    .app__menubar__nav__link {
+    .app__side-menubar__navlink {
       text-decoration: none;
       background: #f9f9f9;
       padding: 15px 0px;
@@ -103,7 +103,7 @@ export default css.global`
             display: none;
         }
 
-        .app__menubar__nav {
+        .app__side-menubar {
             // ---specific to our app
             border-right: 1px solid var(--color-neutral-200);
 
@@ -116,11 +116,11 @@ export default css.global`
             margin: 12px auto 82px auto;
         }
         
-        .app__menubar__nav__items {
+        .app__side-menubar__nav {
             gap: 10px
         }
 
-        .app__menubar__nav__link {
+        .app__side-menubar__navlink {
             padding: 16px 0px;
             gap: 30px;
         }
