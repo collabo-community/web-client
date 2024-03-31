@@ -13,7 +13,7 @@ import  useScreenDimensions  from '../hooks/useScreenDimensions';
 import useToggle from '../hooks/useToggle';
 import SideBarComponent from './SideBar';
 import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
-import MobileFilterComponent from './MobileFilter';
+import SM_Screen_FilterComponent from './SM_Screen_Filter';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -58,7 +58,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
             <SideBarComponent toggleSidebar={toggleSidebar}/>
           }
           <h2 className='app__page-title'>{thisPage}</h2>
-          <MobileFilterComponent pathname={pathname}/>
+          <SM_Screen_FilterComponent pathname={pathname}/>
         </header>
         <main>
           { children }

@@ -5,7 +5,7 @@ import useToggle from '../hooks/useToggle';
 import FiltersSideBarComponent from './FiltersSideBar';
 import FilterHamburgerToggleBtnComponent from './FilterHamburgerToggleBtn';
 
-export default function MobileFilterComponent({ pathname }: { pathname: string; }) {
+export default function SM_Screen_FilterComponent({ pathname }: { pathname: string; }) {
   const { toggleFilter, isFilterOpen } = useToggle();
 
   const isProjectPage: boolean = pathname.includes('projects');
