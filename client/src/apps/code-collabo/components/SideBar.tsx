@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useScreenDimensions from '../hooks/useScreenDimensions';
-import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
+import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 
 export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
   const { isDesktop }  = useScreenDimensions();
@@ -10,7 +10,7 @@ export default function SideBarComponent({ toggleSidebar }: { toggleSidebar?: ()
     <>
       {/* Sidebar for DESKTOP & left side menu for MOBILE */}
       <div className='app__side-menubar lib__position-left'>
-        <HamburgerToggleBtnComponent
+        <SM_Screen_HamburgerComponent
           isCloseBtn={true}
           toggleSidebar={toggleSidebar}
         />

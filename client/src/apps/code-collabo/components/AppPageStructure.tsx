@@ -12,7 +12,7 @@ import lib from '@/apps/code-collabo/styles/app.lib';
 import  useScreenDimensions  from '../hooks/useScreenDimensions';
 import useToggle from '../hooks/useToggle';
 import SideBarComponent from './SideBar';
-import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
+import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 import SM_Screen_FilterComponent from './SM_Screen_Filter';
 
 
@@ -50,7 +50,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <div  className='app__content-area'>
         <header className='app__header lib__flex-space-btw__sm'>
           {/* TODO: state management [to prevent nesting/repetition of props too] */}
-          <HamburgerToggleBtnComponent
+          <SM_Screen_HamburgerComponent
             toggleSidebar={toggleSidebar}
           />
           {/* Smaller devices - sidebar */}

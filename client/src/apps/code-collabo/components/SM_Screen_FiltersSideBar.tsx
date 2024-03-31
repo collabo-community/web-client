@@ -2,9 +2,9 @@ import React from 'react';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import FiltersComponent from './Filters';
 
-import FilterHamburgerToggleBtnComponent from './FilterHamburgerToggleBtn';
+import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
 
-export default function FiltersSideBarComponent({ isFilterOpen, toggleFilter }: { isFilterOpen: boolean; toggleFilter?: () => void  }) {
+export default function SM_Screen_FiltersSideBarComponent({ isFilterOpen, toggleFilter }: { isFilterOpen: boolean; toggleFilter?: () => void  }) {
   const  { isMobile }  = useScreenDimensions();
   const isMobileFilterSidebarToggleTrue = isMobile && isFilterOpen;
 
@@ -13,7 +13,7 @@ export default function FiltersSideBarComponent({ isFilterOpen, toggleFilter }: 
     return (
       <>
         <div className='app__side-menubar lib__position-right'>
-          <FilterHamburgerToggleBtnComponent
+          <SM_Screen_FilterHamburgerComponent
             isCloseBtn={true}
             toggleFilter={toggleFilter}
           />

@@ -2,7 +2,7 @@ import React from 'react';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import Image from 'next/image';
 
-export default function FilterHamburgerToggleBtnComponent({ toggleFilter, isCloseBtn }: { toggleFilter?: () => void; isCloseBtn?: boolean; }) {
+export default function SM_Screen_HamburgerComponent({ toggleSidebar, isCloseBtn }: { toggleSidebar?: () => void; isCloseBtn?: boolean; }) {
   const  { isDesktop }  = useScreenDimensions();
   
   // Remove from DOM if on desktop
@@ -12,15 +12,15 @@ export default function FilterHamburgerToggleBtnComponent({ toggleFilter, isClos
   // The "isCloseBtn" prop/style for singling out close button helps achieve this
   if (isCloseBtn) {
     return (
-      <button className='app__menubar__toggle__close lib__position-toggle-left' onClick={toggleFilter}>
+      <button className='app__menubar__toggle__close lib__position-toggle-right' onClick={toggleSidebar}>
         {'<'}
       </button>
     );
   }
 
   return (
-    <button className='app__mobile-menu-btns' onClick={toggleFilter}>
-      <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
+    <button className='app__mobile-menu-btns' onClick={toggleSidebar}>
+      <Image src='/code-collabo/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
     </button>
   );
 }
