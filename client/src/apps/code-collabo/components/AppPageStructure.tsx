@@ -13,8 +13,7 @@ import  useScreenDimensions  from '../hooks/useScreenDimensions';
 import useToggle from '../hooks/useToggle';
 import SideBarComponent from './SideBar';
 import HamburgerToggleBtnComponent from './HamburgerToggleBtn';
-import FiltersSideBarComponent from './FiltersSideBar';
-import FilterHamburgerToggleBtnComponent from './FilterHamburgerToggleBtn';
+import MobileFilterComponent from './MobileFilter';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
@@ -22,15 +21,11 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
-  // Is there any other way we can get to check projects page???
-  const isProjectPage = pathname.includes('projects');
-
   const  { isMobile, isDesktop }  = useScreenDimensions();
-  const { isSidebarOpen, toggleSidebar, toggleFilter, isFilterOpen } = useToggle();
+  const { isSidebarOpen, toggleSidebar } = useToggle();
 
   // Used to show or hide sidebar (only on mobile)
   const isMobileSidebarToggleTrue = isMobile && isSidebarOpen;
-  const isMobileFilterSidebarToggleTrue = isMobile && isFilterOpen;
 
   return (
     <>
@@ -63,20 +58,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
             <SideBarComponent toggleSidebar={toggleSidebar}/>
           }
           <h2 className='app__page-title'>{thisPage}</h2>
-
-          {/* Reminder to have a "Mobile Filter" component later, where you can return it or not if isProjectPage */}
-          {isProjectPage &&
-            <>
-              <FilterHamburgerToggleBtnComponent toggleFilter={toggleFilter} />
-
-              { isMobileFilterSidebarToggleTrue && (
-                <FiltersSideBarComponent
-                  toggleFilter={toggleFilter}
-                />
-              )
-              }
-            </>
-          }
+          <MobileFilterComponent pathname={pathname}/>
         </header>
         <main>
           { children }
