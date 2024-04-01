@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
-import { getPage } from '@/apps/shared/helpers/meta';
-import { appInfo, urlStart } from '@/apps/code-collabo/helpers/appInfo';
+import { getPage } from '@/modules/shared/helpers/meta';
+import { appInfo, urlStart } from '@/modules/code-collabo/helpers/appInfo';
 
-import PageHeadElement from '@/apps/shared/components/PageHeadElement';
+import PageHeadElement from '@/modules/shared/components/PageHeadElement';
 
-import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
-import main from '@/apps/code-collabo/styles/app.main';
-import lib from '@/apps/code-collabo/styles/app.lib';
+import { colors, spacing, types } from '@/modules/code-collabo/styles/app.imports';
+import main from '@/modules/code-collabo/styles/app.main';
+import lib from '@/modules/code-collabo/styles/app.lib';
 
 import useToggle from '../hooks/useToggle';
 

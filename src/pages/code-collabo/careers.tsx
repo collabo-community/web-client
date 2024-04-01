@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/apps/code-collabo/components/AppPageLayout';
+import { getCodeCollaboSubCommunityLayout } from '@/modules/code-collabo/components/AppPageLayout';
 
-import careers from '@/apps/code-collabo/styles/modules/careers.module.css';
+import careers from '@/modules/code-collabo/styles/modules/careers.module.css';
 
 const CareersPageCodeCollabo: NextPageWithLayout = () => {
   return (

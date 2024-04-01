@@ -1,4 +1,4 @@
-import firstApp404 from '@/apps/code-collabo/styles/modules/custom404.module.css';
+import firstApp404 from '@/modules/code-collabo/styles/modules/custom404.module.css';
 
 export default function Custom404Component() {
   return (

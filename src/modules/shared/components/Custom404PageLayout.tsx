@@ -1,17 +1,17 @@
 import { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 
-import PageLayout from '@/apps/shared/components/PageLayout';
+import PageLayout from '@/modules/shared/components/PageLayout';
 
-import CommunityPageStructure from '@/apps/community/components/AppPageStructure';
-import CodeCollaboPageStructure from '@/apps/code-collabo/components/AppPageStructure';
+import CommunityPageStructure from '@/modules/community/components/AppPageStructure';
+import CodeCollaboPageStructure from '@/modules/code-collabo/components/AppPageStructure';
 
-import Community404Component from '@/apps/community/components/404component';
-import CodeCollabo404Component from '@/apps/code-collabo/components/404component';
+import Community404Component from '@/modules/community/components/404component';
+import CodeCollabo404Component from '@/modules/code-collabo/components/404component';
 
-import { useRouteraspath } from '@/apps/shared/hooks/useRouteraspath';
+import { useRouteraspath } from '@/modules/shared/hooks/useRouteraspath';
 
-import { urlStart as firstSubAppUrlStart } from '@/apps/code-collabo/helpers/appInfo';
+import { urlStart as firstSubAppUrlStart } from '@/modules/code-collabo/helpers/appInfo';
 
 export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();

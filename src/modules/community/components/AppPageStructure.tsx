@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
-import { getPage } from '@/apps/shared/helpers/meta';
-import { appInfo, urlStart } from '@/apps/community/helpers/appInfo';
+import { getPage } from '@/modules/shared/helpers/meta';
+import { appInfo, urlStart } from '@/modules/community/helpers/appInfo';
 
-import PageHeadElement from '@/apps/shared/components/PageHeadElement';
+import PageHeadElement from '@/modules/shared/components/PageHeadElement';
 
-import { colors } from '@/apps/community/styles/app.imports';
-import main from '@/apps/community/styles/app.main';
+import { colors } from '@/modules/community/styles/app.imports';
+import main from '@/modules/community/styles/app.main';
 
 export default function PageStructure({ children }: { children: ReactNode}) {
   let { pathname } = useRouter();
