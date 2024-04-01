@@ -1,6 +1,6 @@
 /* COLLABO COMMUNITY */
 /* For css specific to only 404 page */
-/* Imported as mainApp404 into the custom404 component when we need it */
+/* Imported as appHome404 into the custom404 component when we need it */
 
 .test {
     background: var(--color-shade-black);
