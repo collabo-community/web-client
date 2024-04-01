@@ -1,5 +1,5 @@
-import React from "react";
-import useScreenDimensions from "../hooks/useScreenDimensions";
+import React from 'react';
+import useScreenDimensions from '../hooks/useScreenDimensions';
 
 import projects from '@/apps/code-collabo/styles/modules/projects.module.css';
 

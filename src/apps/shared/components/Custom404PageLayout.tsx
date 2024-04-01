@@ -16,7 +16,7 @@ import { useRouteraspath } from '@/apps/shared/hooks/useRouteraspath';
 import { urlStart as firstSubAppUrlStart } from '@/apps/code-collabo/helpers/appInfo';
 import { urlStart as secondSubAppUrlStart } from '@/apps/other-subcommunity/helpers/appInfo';
 
-export function getCustom404Layout(page: ReactElement) {
+export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();
   const { appRoute } = useRouteraspath({ router });
 

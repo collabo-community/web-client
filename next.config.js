@@ -22,7 +22,7 @@ const nextConfig = {
         destination: '/',
         permanent: false,
       },
-    ]
+    ];
   },
 };
 
