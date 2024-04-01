@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import PageLayout from '@/modules/shared/components/PageLayout';
 
 import CommunityPageStructure from '@/modules/app-home/components/AppPage';
-import CodeCollaboPageStructure from '@/modules/code-collabo/components/AppPageStructure';
+import CodeCollaboPageStructure from '@/modules/code-collabo/components/AppPage';
 
 import Community404Component from '@/modules/app-home/components/404';
-import CodeCollabo404Component from '@/modules/code-collabo/components/404component';
+import CodeCollabo404Component from '@/modules/code-collabo/components/404';
 
 import { useRouteraspath } from '@/modules/shared/hooks/useRouteraspath';
 

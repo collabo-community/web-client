@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/modules/code-collabo/components/AppPageLayout';
+import { getCodeCollaboSubCommunityLayout } from '@/modules/code-collabo/components/AppLayout';
 
 import overview from '@/modules/code-collabo/styles/modules/overview.module.css';
 
