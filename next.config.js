@@ -8,11 +8,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/other-subcommunity/overview',
-        destination: '/other-subcommunity',
-        permanent: false,
-      },
-      {
         source: '/community/home',
         destination: '/',
         permanent: false,
