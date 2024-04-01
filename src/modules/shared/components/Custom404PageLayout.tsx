@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 
 import PageLayout from '@/modules/shared/components/PageLayout';
 
-import CommunityPageStructure from '@/modules/home/components/AppPageStructure';
+import CommunityPageStructure from '@/modules/app-home/components/AppPageStructure';
 import CodeCollaboPageStructure from '@/modules/code-collabo/components/AppPageStructure';
 
-import Community404Component from '@/modules/home/components/404component';
+import Community404Component from '@/modules/app-home/components/404component';
 import CodeCollabo404Component from '@/modules/code-collabo/components/404component';
 
 import { useRouteraspath } from '@/modules/shared/hooks/useRouteraspath';

@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCommunityLayout } from '@/modules/home/components/AppPageLayout';
+import { getCommunityLayout } from '@/modules/app-home/components/AppPageLayout';
 
-import home from '@/modules/home/styles/modules/home.module.css';
+import home from '@/modules/app-home/styles/modules/home.module.css';
 
 const AppHomePage: NextPageWithLayout = () => {
   return (

@@ -1,4 +1,4 @@
-import mainApp404 from '@/modules/home/styles/modules/custom404.module.css';
+import mainApp404 from '@/modules/app-home/styles/modules/custom404.module.css';
 
 export default function Custom404Component() {
   return (
