@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 
 import PageLayout from '@/modules/shared/components/PageLayout';
-import PageStructure from '@/modules/app-home/components/AppPageStructure';
+import PageStructure from '@/modules/app-home/components/AppPage';
 
 export function getCommunityLayout(page: ReactElement) {
   return (

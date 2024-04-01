@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCommunityLayout } from '@/modules/app-home/components/AppPageLayout';
+import { getCommunityLayout } from '@/modules/app-home/components/AppLayout';
 
 import home from '@/modules/app-home/styles/modules/home.module.css';
 
