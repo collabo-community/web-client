@@ -9,7 +9,14 @@ export default css.global`
   /*===========| SPACING |===============*/
   /* for e.g. padding and margin */
 
-  --spacing-sm: 6px;
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-30: 30px;
+  --spacing-40: 40px;
+  --spacing-50: 50px;
+  --spacing-65: 65px;
   
   /*==================================*/
 

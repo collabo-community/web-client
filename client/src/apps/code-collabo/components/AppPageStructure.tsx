@@ -8,12 +8,21 @@ import PageHeadElement from '@/apps/shared/components/PageHeadElement';
 
 import { colors, spacing, types } from '@/apps/code-collabo/styles/app.imports';
 import main from '@/apps/code-collabo/styles/app.main';
+import lib from '@/apps/code-collabo/styles/app.lib';
+
+import useToggle from '../hooks/useToggle';
+
+import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
+import SM_Screen_FilterComponent from './SM_Screen_Filter';
+import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from './SideBar';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {
   let { pathname } = useRouter();
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
+
+  const { toggleSidebar, isSidebarOpen } = useToggle();
 
   return (
     <>
@@ -26,24 +35,24 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <style jsx global>{ colors }</style>
       <style jsx global>{ spacing }</style>
       <style jsx global>{ types }</style>
+      <style jsx global>{ lib }</style>
       <style jsx global>{ main }</style>
 
-      {/* Sidebar */}
-      <div>
-        <div><b>CODE COLLABO Sidebar Logo</b> goes here</div>
-        <nav>
-          <span><b>Sidebar Nav Menu</b> goes here: </span>
-          <button>Overview</button>
-          <button>Projects</button>
-          <button>Careers</button>
-          <button>Donate</button>
-        </nav>
-      </div>
+      {/* MidAndUp-screens Sidebar */}
+      <MidAndUp_Screens_SideBarComponent />
 
-      {/* Page Content */}
-      <div>
-        <header>
-          <h2 className='page-title'>{thisPage}</h2>
+      {/* Page Content area for MidAndUp-screens, but is whole page for SM-screen-devices */}
+      <div  className='app__content-area'>
+        <header className='app__header lib__flex-space-btw__sm'>
+          <SM_Screen_HamburgerComponent
+            toggleSidebar={toggleSidebar}
+          />
+          <SM_Screen_SideBarComponent
+            isSidebarOpen={isSidebarOpen}
+            toggleSidebar={toggleSidebar}
+          />
+          <h2 className='app__page-title'>{thisPage}</h2>
+          <SM_Screen_FilterComponent pathname={pathname}/>
         </header>
         <main>
           { children }

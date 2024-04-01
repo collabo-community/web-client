@@ -2,7 +2,56 @@
 /* For css specific to only PROJECTS page */
 /* Imported as projects into the projects page when we need it */
 
-.test {
-    background: var(--color-primary-150);
-    color: var(--color-shade-white);
+
+.side_menubar__filter {
+    margin: 0 auto;
+    gap: 20px;
+    width: calc(100% - 100px);
+
+    /* Stack content on top of each other */
+    display: flex;
+    flex-direction: column;
+}
+
+.select_elem {
+    padding: 13px 26px;
+    background: var(--color-neutral-100);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.filterbyText {
+      display: block;
+      margin: 70px auto 20px auto;
+      width: fit-content;
+}
+
+.cardsArea {
+    margin: 0 auto;
+    width: calc(100% - 30px);
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 600px) {
+    .cardsArea {
+        width: calc(100% - 10px);
+        padding: 40px 0 65px 0;
+    }
+
+    .paginationArea {
+        width: fit-content;
+        padding: 8px;
+    }
+
+    /* Temporary styles? */
+    .select_elem {
+        padding: 13px 26px;
+        margin-left: 10px;
+        width: unset;
+    }
+}
+
+/* VERY LARGE SCREENS */
+@media screen and (min-width: 1440px) {
+
 }

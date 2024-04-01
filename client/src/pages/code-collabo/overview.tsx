@@ -5,9 +5,7 @@ import overview from '@/apps/code-collabo/styles/modules/overview.module.css';
 
 const OverviewPageCodeCollabo: NextPageWithLayout = () => {
   return (
-    <>
-      <p className={`${overview.test} dummy-module-text`}>Dummy Page Content: CSS Module Test!</p>
-    </>
+    <div className={`${overview.test} dummy-module-text`}>Page content area</div>
   );
 };
 

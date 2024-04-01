@@ -1,0 +1,8 @@
+/* CODE-COLLABO SUBCOMMUNITY only */
+/* For css specific to only DONATES page */
+/* Imported as projects into the donates page when we need it */
+
+.container {
+    background: var(--color-warning-150);
+    color: var(--color-shade-black);
+}

@@ -1,0 +1,8 @@
+/* CODE-COLLABO SUBCOMMUNITY only */
+/* For css specific to only CAREERRS page */
+/* Imported as careers into the careers page when we need it */
+
+.container {
+    background: var(--color-warning-150);
+    color: var(--color-shade-black);
+}
