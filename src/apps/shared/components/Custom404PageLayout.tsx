@@ -5,16 +5,13 @@ import PageLayout from '@/apps/shared/components/PageLayout';
 
 import CommunityPageStructure from '@/apps/community/components/AppPageStructure';
 import CodeCollaboPageStructure from '@/apps/code-collabo/components/AppPageStructure';
-import OtherSubcommunityPageStructure from '@/apps/other-subcommunity/components/AppPageStructure';
 
 import Community404Component from '@/apps/community/components/404component';
 import CodeCollabo404Component from '@/apps/code-collabo/components/404component';
-import OtherSubcommunity404Component from '@/apps/other-subcommunity/components/404component';
 
 import { useRouteraspath } from '@/apps/shared/hooks/useRouteraspath';
 
 import { urlStart as firstSubAppUrlStart } from '@/apps/code-collabo/helpers/appInfo';
-import { urlStart as secondSubAppUrlStart } from '@/apps/other-subcommunity/helpers/appInfo';
 
 export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();
@@ -26,7 +23,6 @@ export function GetCustom404Layout(page: ReactElement) {
   
   const is = {
     firstApp404Route: urlStartIsAtIndexZero(firstSubAppUrlStart) && !urlStartHasMoreTextAfterItAndHasNoSlashInbetween(firstSubAppUrlStart.length),
-    secondApp404Route: urlStartIsAtIndexZero(secondSubAppUrlStart) && !urlStartHasMoreTextAfterItAndHasNoSlashInbetween(secondSubAppUrlStart.length),
   };
 
   // At initial point when appRoute is '': Prevent main app's layout flickering
@@ -42,18 +38,6 @@ export function GetCustom404Layout(page: ReactElement) {
           {page}
           <CodeCollabo404Component></CodeCollabo404Component>
         </CodeCollaboPageStructure>
-      </PageLayout>
-    );
-  }
-
-  // When in 2nd subcommunity route, return this 404 layout and content
-  if (is.secondApp404Route) {
-    return (
-      <PageLayout>
-        <OtherSubcommunityPageStructure>
-          {page}
-          <OtherSubcommunity404Component></OtherSubcommunity404Component>
-        </OtherSubcommunityPageStructure>
       </PageLayout>
     );
   }
