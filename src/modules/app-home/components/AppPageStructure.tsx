@@ -2,12 +2,12 @@ import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
 import { getPage } from '@/modules/shared/helpers/meta';
-import { appInfo, urlStart } from '@/modules/home/helpers/appInfo';
+import { appInfo, urlStart } from '@/modules/app-home/helpers/appInfo';
 
 import PageHeadElement from '@/modules/shared/components/PageHeadElement';
 
-import { colors } from '@/modules/home/styles/app.imports';
-import main from '@/modules/home/styles/app.main';
+import { colors } from '@/modules/app-home/styles/app.imports';
+import main from '@/modules/app-home/styles/app.main';
 
 export default function PageStructure({ children }: { children: ReactNode}) {
   let { pathname } = useRouter();
