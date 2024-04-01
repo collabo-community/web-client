@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCommunityLayout } from '@/modules/app-home/components/AppLayout';
+import { getAppHomeLayout } from '@/modules/app-home/components/AppLayout';
 
 import home from '@/modules/app-home/styles/modules/home.module.css';
 
@@ -11,5 +11,5 @@ const AppHomePage: NextPageWithLayout = () => {
   );
 };
 
-AppHomePage.getLayout = getCommunityLayout;
+AppHomePage.getLayout = getAppHomeLayout;
 export default AppHomePage;
