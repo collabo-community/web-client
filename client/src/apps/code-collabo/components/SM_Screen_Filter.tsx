@@ -10,7 +10,7 @@ export default function SM_Screen_FilterComponent({ pathname }: { pathname: stri
 
   const isProjectPage: boolean = pathname.includes('projects');
 
-  // Display mobile filter components only when on project page
+  // Display SM-screen-devices filter components only when on project page
   if (isProjectPage) {
     return (
       <>

@@ -8,7 +8,7 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
   const { is_midAndUp_screens }  = useScreenDimensions();
   return (
     <>
-      {/* Sidebar for DESKTOP & left side menu for MOBILE */}
+      {/* Sidebar for MidAndUp-screens & left side menu for SM-screen-devices */}
       <div className='app__side-menubar lib__position-left'>
         <SM_Screen_HamburgerComponent
           isCloseBtn={true}
@@ -43,11 +43,11 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
 
 export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { isSidebarOpen: boolean; toggleSidebar: () => void; }) => {
   const { is_sm_screen }  = useScreenDimensions();
-  // Used to show or hide sidebar (only on mobile)
-  const isMobileSidebarToggleTrue = is_sm_screen && isSidebarOpen;
+  // Used to show or hide sidebar (only on SM-screen-devices)
+  const is_SM_Screen_SidebarToggleTrue = is_sm_screen && isSidebarOpen;
 
   // Display sm_screen sidebar in this case
-  if (isMobileSidebarToggleTrue) {
+  if (is_SM_Screen_SidebarToggleTrue) {
     return <SideBarComponent toggleSidebar={toggleSidebar}/>;
   }
 
@@ -59,7 +59,7 @@ export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { i
 export const MidAndUp_Screens_SideBarComponent = () => {
   const { is_midAndUp_screens }  = useScreenDimensions();
 
-  // Display larger sidebar in this case
+  // Display MidAndUp-screens sidebar in this case
   if (is_midAndUp_screens) {
     return <SideBarComponent />;
   }

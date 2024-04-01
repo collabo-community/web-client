@@ -38,12 +38,12 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <style jsx global>{ lib }</style>
       <style jsx global>{ main }</style>
 
+      {/* MidAndUp-screens Sidebar */}
       <MidAndUp_Screens_SideBarComponent />
 
-      {/* Page Content area for Desktop & Whole page for mobile */}
+      {/* Page Content area for MidAndUp-screens, but is whole page for SM-screen-devices */}
       <div  className='app__content-area'>
         <header className='app__header lib__flex-space-btw__sm'>
-          {/* TODO: state management [to prevent nesting/repetition of props too] */}
           <SM_Screen_HamburgerComponent
             toggleSidebar={toggleSidebar}
           />
