@@ -41,7 +41,7 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
 }
 
 
-export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { isSidebarOpen: boolean; toggleSidebar?: () => void; }) => {
+export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { isSidebarOpen: boolean; toggleSidebar: () => void; }) => {
   const { is_sm_screen }  = useScreenDimensions();
   // Used to show or hide sidebar (only on mobile)
   const isMobileSidebarToggleTrue = is_sm_screen && isSidebarOpen;
@@ -56,12 +56,12 @@ export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { i
 };
 
 
-export const MidAndUp_Screens_SideBarComponent = ({ toggleSidebar }: { toggleSidebar?: () => void; }) => {
+export const MidAndUp_Screens_SideBarComponent = () => {
   const { is_midAndUp_screens }  = useScreenDimensions();
 
   // Display larger sidebar in this case
   if (is_midAndUp_screens) {
-    return <SideBarComponent toggleSidebar={toggleSidebar}/>;
+    return <SideBarComponent />;
   }
 
   // Otherwise, don't display or show in DOM

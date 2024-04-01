@@ -38,9 +38,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
       <style jsx global>{ lib }</style>
       <style jsx global>{ main }</style>
 
-      <MidAndUp_Screens_SideBarComponent
-        toggleSidebar={toggleSidebar}
-      />
+      <MidAndUp_Screens_SideBarComponent />
 
       {/* Page Content area for Desktop & Whole page for mobile */}
       <div  className='app__content-area'>
