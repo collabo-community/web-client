@@ -5,10 +5,11 @@ import useScreenDimensions from '../hooks/useScreenDimensions';
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 
 function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
-  const { is_midAndUp_screens }  = useScreenDimensions();
+  const { is_midAndUp_screens, is_sm_screen }  = useScreenDimensions();
   return (
     <>
       {/* Sidebar for MidAndUp-screens & left side menu for SM-screen-devices */}
+      {is_sm_screen && <div className='app__menubar-overlay' onClick={toggleSidebar}></div>}
       <div className='app__side-menubar lib__position-left'>
         <SM_Screen_HamburgerComponent
           isCloseBtn={true}
