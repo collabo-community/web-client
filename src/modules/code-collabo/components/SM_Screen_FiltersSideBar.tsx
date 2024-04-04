@@ -1,6 +1,7 @@
 import React from 'react';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import FiltersComponent from './Filters';
+import Overlay from './Overlay';
 
 import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
 
@@ -12,6 +13,7 @@ export default function SM_Screen_FiltersSideBarComponent({ isFilterOpen, toggle
   if (is_SM_Screen_FilterSidebarToggleTrue) {
     return (
       <>
+        <Overlay toggle={toggleFilter} />
         <div className='app__side-menubar lib__position-right'>
           <SM_Screen_FilterHamburgerComponent
             isCloseBtn={true}
