@@ -5,10 +5,8 @@ import useToggle from '../hooks/useToggle';
 import SM_Screen_FiltersSideBarComponent from './SM_Screen_FiltersSideBar';
 import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
 
-export default function SM_Screen_FilterComponent({ pathname }: { pathname: string; }) {
+export default function SM_Screen_FilterComponent({ isProjectPage }: { isProjectPage: boolean; }) {
   const { toggleFilter, isFilterOpen } = useToggle();
-
-  const isProjectPage: boolean = pathname.includes('projects');
 
   // Display SM-screen-devices filter components only when on project page
   if (isProjectPage) {

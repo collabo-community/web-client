@@ -21,6 +21,8 @@ export default function PageStructure({ children }: { children: ReactNode }) {
   let { pathname } = useRouter();
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
+  const isProjectPage: boolean = pathname.includes('projects');
+  const three_column_structure = isProjectPage ? 'lib__flex-space-btw__sm' : 'app__header-column' 
 
   const { toggleSidebar, isSidebarOpen } = useToggle();
 
@@ -43,7 +45,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
       {/* Page Content area for MidAndUp-screens, but is whole page for SM-screen-devices */}
       <div  className='app__content-area'>
-        <header className='app__header lib__flex-space-btw__sm'>
+        <header className={`app__header ${three_column_structure}`}>
           <SM_Screen_HamburgerComponent
             toggleSidebar={toggleSidebar}
           />
@@ -52,7 +54,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
             toggleSidebar={toggleSidebar}
           />
           <h2 className='app__page-title'>{thisPage}</h2>
-          <SM_Screen_FilterComponent pathname={pathname}/>
+          <SM_Screen_FilterComponent isProjectPage={isProjectPage}/>
         </header>
         <main>
           { children }
