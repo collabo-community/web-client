@@ -8,12 +8,12 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/community/home',
+        source: '/app-home/home',
         destination: '/',
         permanent: false,
       },
       {
-        source: '/community',
+        source: '/app-home',
         destination: '/',
         permanent: false,
       },
