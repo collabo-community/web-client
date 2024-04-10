@@ -21,7 +21,7 @@ export default css.global`
         padding: 30px 0;
     }
 
-    .app__header-column {
+    .app__header-fit-all {
         display: grid;
         grid-template-columns: auto 1fr 0.22fr;
         align-items: center;
