@@ -1,0 +1,13 @@
+/* COLLABO COMMUNITY */
+/* For css specific to only Issue report page */
+/* Imported as home into the home page when we need it */
+
+.issuePage {
+  background: var(--color-yellow);
+  color:  var(--color-shade-black) ;
+  font-size: 2.4rem;
+  word-spacing: 30px;
+  padding: 6px 0;
+  letter-spacing: -5px;
+  text-align: center;
+}
