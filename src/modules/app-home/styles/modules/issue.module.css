@@ -3,11 +3,16 @@
 /* Imported as home into the home page when we need it */
 
 .issuePage {
-  background: var(--color-yellow);
-  color:  var(--color-shade-black) ;
+  background:#0000ff;
+  color:  var(--color-shade-white) ;
   font-size: 2.4rem;
   word-spacing: 30px;
   padding: 6px 0;
   letter-spacing: -5px;
   text-align: center;
+}
+
+.issueBody {
+  background: #ffc0cb;
+  height: 90vh;
 }
