@@ -5,9 +5,10 @@ import issue from '@/modules/app-home/styles/modules/issue.module.css';
 
 const IssueReportPage: NextPageWithLayout = () => {
   return (
-    <>
+    <main className={issue.issueBody}>
+
       <p className={issue.issuePage}>Issues</p>
-    </>
+    </main>
   );
 };
 
