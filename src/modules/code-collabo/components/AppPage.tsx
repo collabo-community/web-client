@@ -43,7 +43,7 @@ export default function PageStructure({ children }: { children: ReactNode }) {
 
       {/* Page Content area for MidAndUp-screens, but is whole page for SM-screen-devices */}
       <div  className='app__content-area'>
-        <header className={`app__header lib__flex-space-btw__sm app__header-fit-all`}>
+        <header className='app__header lib__flex-space-btw__sm'>
           <SM_Screen_HamburgerComponent
             toggleSidebar={toggleSidebar}
           />

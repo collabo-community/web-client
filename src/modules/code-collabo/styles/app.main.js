@@ -21,13 +21,6 @@ export default css.global`
         padding: 30px 0;
     }
 
-    .app__header-fit-all {
-        display: grid;
-        grid-template-columns: auto 1fr 0.22fr;
-        align-items: center;
-        justify-items: center;
-    }
-
     .app__side-menubar {
         // ---belongs to library
         position: fixed;
@@ -90,6 +83,10 @@ export default css.global`
 
     .app__header {
         padding: 13px 0;
+        display: grid;
+        grid-template-columns: auto 1fr 0.22fr;
+        align-items: center;
+        justify-items: center;
     }
 
     .app__mobile-menu-btns {
