@@ -9,6 +9,7 @@ export default function SM_Screen_FilterComponent({ pathname }: { pathname: stri
   const { toggleFilter, isFilterOpen } = useToggle();
 
   const isProjectPage: boolean = pathname.includes('projects');
+
   // Display SM-screen-devices filter components only when on project page
   if (isProjectPage) {
     return (
