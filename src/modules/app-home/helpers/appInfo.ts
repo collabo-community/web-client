@@ -3,7 +3,8 @@ import  { AppInfo } from '@/modules/shared/helpers/types';
 
 const appName = 'collabo community';
 
-const urlStart = stringToUrlStart(appName.replace('collabo ', ''));
+// const urlStart = stringToUrlStart(appName.replace('collabo ', ''));
+const urlStart = '/app-home';
 
 const page: {[key: number]: string } = {
   1: 'home',
