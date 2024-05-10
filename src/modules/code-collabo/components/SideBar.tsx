@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 import Overlay from './Overlay';
+import useCloseSidebarOnTabOut from '../hooks/useCloseSidebarOnTabOut';
+import useCloseSidebarOnClickOutside from '../hooks/useCloseSidebarOnClickOutside';
 
 function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
   const { is_midAndUp_screens }  = useScreenDimensions();
+
+  const sidebarRef = useRef<HTMLDivElement>(null);
+
+  useCloseSidebarOnClickOutside(sidebarRef, toggleSidebar);
+
+  useCloseSidebarOnTabOut(!!toggleSidebar, toggleSidebar as () => void);
+  
   return (
     <>
       {/* Sidebar for MidAndUp-screens & left side menu for SM-screen-devices */}
