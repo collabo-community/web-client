@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import useCloseSidebarOnClickOutside from '../hooks/useCloseSidebarOnClickOutside';
-import useCloseSidebarOnTabOut from '../hooks/useCloseSidebarOnTabOut';
+import React from 'react';
 import useScreenDimensions from '../hooks/useScreenDimensions';
 import FiltersComponent from './Filters';
 import Overlay from './Overlay';
@@ -10,12 +8,6 @@ import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
 export default function SM_Screen_FiltersSideBarComponent({ isFilterOpen, toggleFilter }: { isFilterOpen: boolean; toggleFilter?: () => void  }) {
   const  { is_sm_screen }  = useScreenDimensions();
   const is_SM_Screen_FilterSidebarToggleTrue = is_sm_screen && isFilterOpen;
-
-  const sidebarRef = useRef<HTMLDivElement>(null);
-
-  useCloseSidebarOnClickOutside(sidebarRef, toggleFilter);
-
-  useCloseSidebarOnTabOut(!!toggleFilter, toggleFilter as () => void);
 
   // Filter sidebar should show and open for SM-screen-devices when filter is open
   if (is_SM_Screen_FilterSidebarToggleTrue) {
