@@ -1,6 +1,6 @@
 # @collabo-community/web-client
 
-This Repository contains the code for the Collabo Community App's web client. See Collabo Community doumentation for more information about the project.
+This repository contains the code for the Collabo Community App's web client. See Collabo Community doumentation for more information about the project.
 
 #
 
