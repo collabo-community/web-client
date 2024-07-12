@@ -1,5 +1,6 @@
 {
   "name": "collabo-web-app",
+  "description": "The web client for the Collabo Community App",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -25,5 +26,16 @@
     "eslint-config-next": "13.5.4",
     "eslint-watch": "^8.0.0",
     "typescript": "^5"
-  }
+  },
+  "homepage": "https://github.com/collabo-community/web-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collabo-community/web-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/collabo-community/issue-tickets-ready-for-fixing/issues"
+  },
+  "author": "Collabo Community [Code Collabo]",
+  "license": "AGPL v3.0",
+  "contributors": ["Find list of contributors in project README: https://github.com/collabo-community/web-client?tab=readme-ov-file#contributors"]
 }
