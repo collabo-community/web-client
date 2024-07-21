@@ -1,0 +1,90 @@
+{
+  "projectName": "web-client",
+  "projectOwner": "collabo-community",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 6,
+  "contributorsSortAlphabetically": true,
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "samuko-things",
+      "name": "Obiagba Samuel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75276934?v=4",
+      "profile": "https://github.com/samuko-things",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Dkingofcode",
+      "name": "David Oladepo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91491738?v=4",
+      "profile": "https://github.com/Dkingofcode",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tylerjusfly",
+      "name": "Momoh Taiwo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53145644?v=4",
+      "profile": "https://tylerjusflyportfolio.netlify.app/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "KBandipo",
+      "name": "Bandipo Kehinde",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138725926?v=4",
+      "profile": "https://github.com/KBandipo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Akpjunior94",
+      "name": "Akpan Abraham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56775903?v=4",
+      "profile": "https://github.com/Akpjunior94",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "AbrahamAkp",
+      "name": "AbrahamAkp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138671663?v=4",
+      "profile": "https://github.com/AbrahamAkp",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "aybeedee",
+      "name": "Abdullah Umer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75930195?v=4",
+      "profile": "https://github.com/aybeedee",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Ifycode",
+      "name": "Mary @Ifycode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45185388?v=4",
+      "profile": "https://github.com/Ifycode",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "commitConvention": "angular",
+  "commitType": "docs"
+}
