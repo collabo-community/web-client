@@ -15,23 +15,23 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
           isCloseBtn={true}
           toggleSidebar={toggleSidebar}
         />
-        <Link className='app__logo' href='/code-collabo'>
+        <Link className='app__logo' href='/'>
           <Image src='/code-collabo/logo.png' alt='logo' width={is_midAndUp_screens ? 207 : 172} height={is_midAndUp_screens ? 55 : 40} />
         </Link>
         <nav className='app__side-menubar__nav lib__flex-space-btw-col'>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/code-collabo'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/'>
             <Image src='/code-collabo/dashboard.png' alt='donate-icon' width='17' height='15' />
             Overview
           </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/code-collabo/projects'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/projects'>
             <Image src='/code-collabo/project-icon.png' alt='project-icon' width='17' height='15' />
             Projects
           </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/code-collabo/careers'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/careers'>
             <Image src='/code-collabo/career-icon.png' alt='career-icon' width='17' height='15' />
             Careers
           </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/code-collabo/donate'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/donate'>
             <Image src='/code-collabo/donate.png' alt='donate-icon' width='17' height='15' />
             Donate
           </Link>
