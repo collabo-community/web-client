@@ -3,11 +3,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/code-collabo/overview',
-        destination: '/code-collabo',
-        permanent: false,
-      },
-      {
         source: '/app-home/home',
         destination: '/',
         permanent: false,
