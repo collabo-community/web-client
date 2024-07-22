@@ -23,8 +23,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  console.log('final url', url)
-
   return NextResponse.rewrite(url);
 }
 
