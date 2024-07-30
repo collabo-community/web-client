@@ -16,11 +16,11 @@ import { urlStart as firstSubAppUrlStart } from '@/modules/code-collabo/helpers/
 export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();
   const { appRoute } = useRouteraspath({ router });
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
 
   const urlStartIsAtIndexZero = (subAppUrlStart: string) => appRoute.indexOf(subAppUrlStart) === 0;
-  // e.g. '/code-collaboproco' should not be recognised as a 404 route for /code-collabo app even though first part of the string matches the route
   const urlStartHasMoreTextAfterItAndHasNoSlashInbetween = (urlStartLength: number) => appRoute.length > urlStartLength && appRoute[urlStartLength] !== '/';
-  
+
   const is = {
     firstApp404Route: urlStartIsAtIndexZero(firstSubAppUrlStart) && !urlStartHasMoreTextAfterItAndHasNoSlashInbetween(firstSubAppUrlStart.length),
   };
@@ -30,17 +30,27 @@ export function GetCustom404Layout(page: ReactElement) {
     return null;
   }
 
-  // When in 1st subcommunity route, return this 404 layout and content
-  if (is.firstApp404Route) {
-    return (
-      <PageLayout>
-        <CodeCollaboPageStructure>
-          {page}
-          <CodeCollabo404Component></CodeCollabo404Component>
-        </CodeCollaboPageStructure>
-      </PageLayout>
-    );
-  }
+  if (hostname === 'app.localhost') {
+    if (is.firstApp404Route) {
+      return (
+        <PageLayout>
+          <CodeCollaboPageStructure>
+            {page}
+            <CodeCollabo404Component></CodeCollabo404Component>
+          </CodeCollaboPageStructure>
+        </PageLayout>
+      );
+    } else {
+      return (
+        <PageLayout>
+          <CodeCollaboPageStructure>
+            {page}
+            <CodeCollabo404Component></CodeCollabo404Component>
+          </CodeCollaboPageStructure>
+        </PageLayout>
+      );
+    }
+  } 
 
   // By default: Return AppHome 404 layout and content
   return (
