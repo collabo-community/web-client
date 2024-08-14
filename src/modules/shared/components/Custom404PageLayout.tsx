@@ -50,7 +50,7 @@ export function GetCustom404Layout(page: ReactElement) {
         </PageLayout>
       );
     }
-  } 
+  }
 
   // By default: Return AppHome 404 layout and content
   return (
