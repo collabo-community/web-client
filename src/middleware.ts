@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
 
   if (hostname === 'app.localhost') {
     if (url.pathname === '/') {
-      url.pathname = '/code-collabo/overview';
+      url.pathname = '/code-collabo/projects';
     } else {
       url.pathname = `/code-collabo${url.pathname}`;
     }
@@ -15,11 +15,6 @@ export function middleware(request: NextRequest) {
       url.pathname = '/';
     } else {
       url.pathname = `/app-home${url.pathname}`;
-    }
-  } else {
-    // If the path starts with app-home or code-collabo on any other domain, return a 404 response
-    if (url.pathname.startsWith('/code-collabo') || url.pathname.startsWith('/app-home')) {
-      return NextResponse.rewrite(new URL('/404', request.url));
     }
   }
 

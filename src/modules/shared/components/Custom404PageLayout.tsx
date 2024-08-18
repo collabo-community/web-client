@@ -11,18 +11,13 @@ import CodeCollabo404Component from '@/modules/code-collabo/components/404';
 
 import { useRouteraspath } from '@/modules/shared/hooks/useRouteraspath';
 
-import { urlStart as firstSubAppUrlStart } from '@/modules/code-collabo/helpers/appInfo';
-
 export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();
   const { appRoute } = useRouteraspath({ router });
   const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
 
-  const urlStartIsAtIndexZero = (subAppUrlStart: string) => appRoute.indexOf(subAppUrlStart) === 0;
-  const urlStartHasMoreTextAfterItAndHasNoSlashInbetween = (urlStartLength: number) => appRoute.length > urlStartLength && appRoute[urlStartLength] !== '/';
-
   const is = {
-    firstApp404Route: urlStartIsAtIndexZero(firstSubAppUrlStart) && !urlStartHasMoreTextAfterItAndHasNoSlashInbetween(firstSubAppUrlStart.length),
+    firstApp404Route: hostname === 'app.localhost',
   };
 
   // At initial point when appRoute is '': Prevent main app's layout flickering
@@ -30,26 +25,16 @@ export function GetCustom404Layout(page: ReactElement) {
     return null;
   }
 
-  if (hostname === 'app.localhost') {
-    if (is.firstApp404Route) {
-      return (
-        <PageLayout>
-          <CodeCollaboPageStructure>
-            {page}
-            <CodeCollabo404Component></CodeCollabo404Component>
-          </CodeCollaboPageStructure>
-        </PageLayout>
-      );
-    } else {
-      return (
-        <PageLayout>
-          <CodeCollaboPageStructure>
-            {page}
-            <CodeCollabo404Component></CodeCollabo404Component>
-          </CodeCollaboPageStructure>
-        </PageLayout>
-      );
-    }
+  // When in 1st subcommunity route, return this 404 layout and content
+  if (is.firstApp404Route) {
+    return (
+      <PageLayout>
+        <CodeCollaboPageStructure>
+          {page}
+          <CodeCollabo404Component></CodeCollabo404Component>
+        </CodeCollaboPageStructure>
+      </PageLayout>
+    );
   }
 
   // By default: Return AppHome 404 layout and content
