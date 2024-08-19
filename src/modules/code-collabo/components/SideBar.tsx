@@ -19,7 +19,7 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
           <Image src='/code-collabo/logo.png' alt='logo' width={is_midAndUp_screens ? 207 : 172} height={is_midAndUp_screens ? 55 : 40} />
         </Link>
         <nav className='app__side-menubar__nav lib__flex-space-btw-col'>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/overview'>
             <Image src='/code-collabo/dashboard.png' alt='donate-icon' width='17' height='15' />
             Overview
           </Link>
@@ -54,7 +54,7 @@ export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { i
         <Overlay toggle={toggleSidebar} />
         <SideBarComponent toggleSidebar={toggleSidebar}/>
       </>
-    )
+    );
   }
 
   // Otherwise, don't display or show in DOM
