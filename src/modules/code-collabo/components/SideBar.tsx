@@ -23,7 +23,7 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
             <Image src='/code-collabo/dashboard.png' alt='donate-icon' width='17' height='15' />
             Overview
           </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/projects'>
+          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/'>
             <Image src='/code-collabo/project-icon.png' alt='project-icon' width='17' height='15' />
             Projects
           </Link>
