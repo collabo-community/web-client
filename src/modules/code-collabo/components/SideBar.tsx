@@ -54,7 +54,7 @@ export const SM_Screen_SideBarComponent = ({ isSidebarOpen, toggleSidebar }: { i
         <Overlay toggle={toggleSidebar} />
         <SideBarComponent toggleSidebar={toggleSidebar}/>
       </>
-    );
+    )
   }
 
   // Otherwise, don't display or show in DOM
