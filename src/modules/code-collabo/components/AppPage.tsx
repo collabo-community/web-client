@@ -6,10 +6,6 @@ import { appInfo, urlStart } from '@/modules/code-collabo/helpers/appInfo';
 
 import PageHeadElement from '@/modules/shared/components/PageHeadElement';
 
-import { colors, spacing, types } from '@/modules/code-collabo/styles/app.imports';
-import main from '@/modules/code-collabo/styles/app.main';
-import lib from '@/modules/code-collabo/styles/app.lib';
-
 import useToggle from '../hooks/useToggle';
 
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
@@ -30,13 +26,6 @@ export default function PageStructure({ children }: { children: ReactNode }) {
         pageTitle={pageTitle}
         faviconUrl='/code-collabo/favicon.ico'
       />
-
-      {/* Global JSX styles for Code Collabo sub-community only */}
-      <style jsx global>{ colors }</style>
-      <style jsx global>{ spacing }</style>
-      <style jsx global>{ types }</style>
-      <style jsx global>{ lib }</style>
-      <style jsx global>{ main }</style>
 
       {/* MidAndUp-screens Sidebar */}
       <MidAndUp_Screens_SideBarComponent />
