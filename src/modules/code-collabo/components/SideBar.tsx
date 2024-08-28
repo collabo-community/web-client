@@ -27,14 +27,6 @@ function SideBarComponent({ toggleSidebar }: { toggleSidebar?: () => void; }) {
             <Image src='/code-collabo/project-icon.png' alt='project-icon' width='17' height='15' />
             Projects
           </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/careers'>
-            <Image src='/code-collabo/career-icon.png' alt='career-icon' width='17' height='15' />
-            Careers
-          </Link>
-          <Link className='app__side-menubar__navlink lib__flex-center' onClick={toggleSidebar} href='/donate'>
-            <Image src='/code-collabo/donate.png' alt='donate-icon' width='17' height='15' />
-            Donate
-          </Link>
         </nav>
       </div>
     </>
