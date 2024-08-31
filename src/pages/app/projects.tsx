@@ -2,7 +2,7 @@ import { NextPageWithLayout } from '@/pages/_app';
 import { getLayout_App } from '@/@layout_app/App_Layout';
 
 import projects from '@/@layout_app/styles/projects.module.css';
-import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
 
 import FiltersComponent from '@/@layout_app/components/Filters';
 

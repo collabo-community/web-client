@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { GetLayout_Custom404 } from '@/@module_shared/components/Custom404_Layout';
+import { GetLayout_Custom404 } from '@/@layout_shared/components/Custom404_Layout';
 
 const Custom404Page: NextPageWithLayout = () => {
   return (

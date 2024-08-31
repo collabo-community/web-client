@@ -1,5 +1,5 @@
-import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@module_shared/helpers/transform';
-import  { AppInfo } from '@/@module_shared/helpers/types';
+import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@layout_shared/helpers/transform';
+import  { AppInfo } from '@/@layout_shared/helpers/types';
 
 const appName = 'community';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
 import FiltersComponent from './Filters';
 import Overlay from './Overlay';
 

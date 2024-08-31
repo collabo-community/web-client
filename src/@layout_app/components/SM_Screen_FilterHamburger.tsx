@@ -1,5 +1,5 @@
 import React from 'react';
-import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
 import Image from 'next/image';
 
 export default function SM_Screen_FilterHamburgerComponent({ toggleFilter, isCloseBtn }: { toggleFilter?: () => void; isCloseBtn?: boolean; }) {

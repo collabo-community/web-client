@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import PageLayout from '@/@module_shared/components/PageLayout';
+import PageLayout from '@/@layout_shared/PageLayout';
 import PageStructure_Community from '@/@layout_community/Community_Page';
 
 export function getLayout_Community(page: ReactElement) {

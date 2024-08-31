@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
-import { getPage } from '@/@module_shared/helpers/meta';
+import { getPage } from '@/@layout_shared/helpers/meta';
 import { appInfo, urlStart } from '@/@layout_app/helpers/appInfo';
 
-import PageHeadElement from '@/@module_shared/components/PageHeadElement';
+import PageHeadElement from '@/@layout_shared/components/PageHeadElement';
 
-import useToggle from '@/@module_external/hooks/useToggle';
+import useToggle from '@/@library_external/hooks/useToggle';
 
 import SM_Screen_HamburgerComponent from './components/SM_Screen_Hamburger';
 import SM_Screen_FilterComponent from './components/SM_Screen_Filter';

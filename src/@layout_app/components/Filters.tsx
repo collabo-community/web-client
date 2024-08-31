@@ -1,5 +1,5 @@
 import React from 'react';
-import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
 
 import projects from '@/@layout_app/styles/projects.module.css';
 

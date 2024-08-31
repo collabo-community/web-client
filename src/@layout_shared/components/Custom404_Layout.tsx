@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 
-import PageLayout from '@/@module_shared/components/PageLayout';
+import PageLayout from '@/@layout_shared/PageLayout';
 
 import PageStructure_Community from '@/@layout_community/Community_Page';
 import PageStructure_App from '@/@layout_app/App_Page';
@@ -9,7 +9,7 @@ import PageStructure_App from '@/@layout_app/App_Page';
 import Community_404Component from '@/@layout_community/components/404';
 import App_404Component from '@/@layout_app/components/404';
 
-import { useRouteraspath } from '@/@module_shared/hooks/useRouteraspath';
+import { useRouteraspath } from '@/@layout_shared/hooks/useRouteraspath';
 
 export function GetLayout_Custom404(page: ReactElement) {
   const router = useRouter();

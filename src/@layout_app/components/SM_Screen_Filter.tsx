@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useToggle from '@/@module_external/hooks/useToggle';
+import useToggle from '@/@library_external/hooks/useToggle';
 
 import SM_Screen_FiltersSideBarComponent from './SM_Screen_FiltersSideBar';
 import SM_Screen_FilterHamburgerComponent from './SM_Screen_FilterHamburger';
