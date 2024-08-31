@@ -13,7 +13,7 @@ import SM_Screen_FilterComponent from './components/SM_Screen_Filter';
 import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from './components/SideBar';
 
 
-export default function PageStructure({ children }: { children: ReactNode }) {
+export default function PageStructure_App({ children }: { children: ReactNode }) {
   let { pathname } = useRouter();
   pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);

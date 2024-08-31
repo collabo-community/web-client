@@ -1,9 +1,9 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getAppHomeLayout } from '@/@bbm_community/AppLayout';
+import { getLayout_Community } from '@/@bbm_community/Community_Layout';
 
 import home from '@/@bbm_community/styles/home.module.css';
 
-const AppHomePage: NextPageWithLayout = () => {
+const HomePage_Community: NextPageWithLayout = () => {
   return (
     <>
       <p className={home.test}>Dummy Page Content: CSS Module Test!</p>
@@ -11,5 +11,5 @@ const AppHomePage: NextPageWithLayout = () => {
   );
 };
 
-AppHomePage.getLayout = getAppHomeLayout;
-export default AppHomePage;
+HomePage_Community.getLayout = getLayout_Community;
+export default HomePage_Community;

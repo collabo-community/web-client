@@ -1,12 +1,12 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/AppLayout';
+import { getLayout_App } from '@/@bbm_app/App_Layout';
 
 import projects from '@/@bbm_app/styles/projects.module.css';
 import useScreenDimensions from '@/@bbm_library/hooks/useScreenDimensions';
 
 import FiltersComponent from '@/@bbm_app/components/Filters';
 
-const ProjectsPageCodeCollabo: NextPageWithLayout = () => {
+const ProjectsPage_App: NextPageWithLayout = () => {
   const  { is_sm_screen }  = useScreenDimensions();
   return (
     <>
@@ -27,5 +27,5 @@ const ProjectsPageCodeCollabo: NextPageWithLayout = () => {
   );
 };
 
-ProjectsPageCodeCollabo.getLayout = getCodeCollaboSubCommunityLayout;
-export default ProjectsPageCodeCollabo;
+ProjectsPage_App.getLayout = getLayout_App;
+export default ProjectsPage_App;

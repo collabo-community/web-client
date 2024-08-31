@@ -6,7 +6,7 @@ import { appInfo, urlStart } from '@/@bbm_community/helpers/appInfo';
 
 import PageHeadElement from '@/@bbm_shared/components/PageHeadElement';
 
-export default function PageStructure({ children }: { children: ReactNode}) {
+export default function PageStructure_Community({ children }: { children: ReactNode}) {
   let { pathname } = useRouter();
   pathname === '/' || pathname === urlStart ? pathname = `${urlStart}/home` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);

@@ -1,13 +1,13 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/AppLayout';
+import { getLayout_App } from '@/@bbm_app/App_Layout';
 
 import overview from '@/@bbm_app/styles/overview.module.css';
 
-const OverviewPageCodeCollabo: NextPageWithLayout = () => {
+const OverviewPage_App: NextPageWithLayout = () => {
   return (
     <div className={`${overview.test} dummy-module-text`}>Page content area</div>
   );
 };
 
-OverviewPageCodeCollabo.getLayout = getCodeCollaboSubCommunityLayout;
-export default OverviewPageCodeCollabo;
+OverviewPage_App.getLayout = getLayout_App;
+export default OverviewPage_App;

@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 
 import PageLayout from '@/@bbm_shared/components/PageLayout';
 
-import AppHomePageStructure from '@/@bbm_community/AppPage';
-import CodeCollaboPageStructure from '@/@bbm_app/AppPage';
+import PageStructure_Community from '@/@bbm_community/Community_Page';
+import PageStructure_App from '@/@bbm_app/App_Page';
 
-import AppHome404Component from '@/@bbm_community/components/404';
-import CodeCollabo404Component from '@/@bbm_app/components/404';
+import Community_404Component from '@/@bbm_community/components/404';
+import App_404Component from '@/@bbm_app/components/404';
 
 import { useRouteraspath } from '@/@bbm_shared/hooks/useRouteraspath';
 
@@ -29,21 +29,21 @@ export function GetCustom404Layout(page: ReactElement) {
   if (is.firstApp404Route) {
     return (
       <PageLayout>
-        <CodeCollaboPageStructure>
+        <PageStructure_App>
           {page}
-          <CodeCollabo404Component></CodeCollabo404Component>
-        </CodeCollaboPageStructure>
+          <App_404Component></App_404Component>
+        </PageStructure_App>
       </PageLayout>
     );
   }
 
-  // By default: Return AppHome 404 layout and content
+  // By default: Return Community 404 layout and content
   return (
     <PageLayout>
-      <AppHomePageStructure>
+      <PageStructure_Community>
         {page}
-        <AppHome404Component></AppHome404Component>
-      </AppHomePageStructure>
+        <Community_404Component></Community_404Component>
+      </PageStructure_Community>
     </PageLayout>
   );
 }
