@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
 import { getPage } from '@/@layout_shared/helpers/meta';
-import { appInfo, urlStart } from '@/@layout_app/helpers/appInfo';
+import { appInfo } from '@/@layout_app/helpers/appInfo';
 
 import PageHeadElement from '@/@layout_shared/components/PageHeadElement';
 
@@ -14,9 +14,8 @@ import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from '.
 
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
-  let { pathname } = useRouter();
-  pathname === urlStart ? pathname =  `${urlStart}/projects` : pathname;
-  const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
+  const { pathname } = useRouter();
+  const { thisPage, pageTitle } = getPage({ pathname, layoutName: appInfo.name });
 
   const { toggleSidebar, isSidebarOpen } = useToggle();
 

@@ -1,26 +1,24 @@
-import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@layout_shared/helpers/transform';
+import { capitalizeAllFirstLetters } from '@/@layout_shared/helpers/transform';
 import  { AppInfo } from '@/@layout_shared/helpers/types';
 
-const appName = 'community';
-
-const urlStart = stringToUrlStart(appName);
-
-const page: {[key: number]: string } = {
-  1: 'home',
-};
+/*-------------------------------------
+  layoutName variable here is only used
+  to save part of the string, that shows
+  up in the browser tab of pages inside
+  of @pages_community
+-------------------------------------*/
+const layoutName = 'collabo community';
+//-------------------------------------
 
 const appInfo: AppInfo = {
-  id: 1,
-  name: capitalizeAllFirstLetters(appName),
+  name: capitalizeAllFirstLetters(layoutName),
   pages: {
     1: {
-      name: page[1],
-      route: `${urlStart}/${page[1]}`,
+      name: 'home',
     },
   },
 };
 
 export {
   appInfo,
-  urlStart,
 };

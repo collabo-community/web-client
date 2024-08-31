@@ -1,14 +1,11 @@
-// types.ts
+
 interface Page {
-    name: string;
-    route: string;
-  }
-  
+  name: string;
+}
+
 export interface AppInfo {
-    id: number;
-    name: string;
-    pages: {
-      [key: number]: Page;
-    };
-  }
-  
+  name: string;
+  pages: {
+    [key: number]: Page;
+  };
+}

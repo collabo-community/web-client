@@ -14,12 +14,12 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/community/home',
+        source: '/@pages_community/home',
         destination: '/',
         permanent: false,
       },
       {
-        source: '/community',
+        source: '/@pages_community',
         destination: '/',
         permanent: false,
       },
