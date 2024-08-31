@@ -1,13 +1,13 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { GetCustom404Layout } from '@/@bbm_shared/components/Custom404PageLayout';
+import { GetLayout_Custom404 } from '@/@bbm_shared/components/Custom404_Layout';
 
 const Custom404Page: NextPageWithLayout = () => {
   return (
     <>
-      {/* 404 page code resides inside the GetCustom404Layout component */}
+      {/* 404 page code resides inside the GetLayout_Custom404 component */}
     </>
   );
 };
 
-Custom404Page.getLayout = GetCustom404Layout;
+Custom404Page.getLayout = GetLayout_Custom404;
 export default Custom404Page;

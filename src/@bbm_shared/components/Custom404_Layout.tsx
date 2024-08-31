@@ -11,7 +11,7 @@ import App_404Component from '@/@bbm_app/components/404';
 
 import { useRouteraspath } from '@/@bbm_shared/hooks/useRouteraspath';
 
-export function GetCustom404Layout(page: ReactElement) {
+export function GetLayout_Custom404(page: ReactElement) {
   const router = useRouter();
   const { appRoute } = useRouteraspath({ router });
   const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
