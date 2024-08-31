@@ -1,10 +1,10 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/modules/code-collabo/components/AppLayout';
+import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/components/AppLayout';
 
-import projects from '@/modules/code-collabo/styles/modules/projects.module.css';
-import useScreenDimensions from '@/modules/code-collabo/hooks/useScreenDimensions';
+import projects from '@/@bbm_app/styles/modules/projects.module.css';
+import useScreenDimensions from '@/@bbm_app/hooks/useScreenDimensions';
 
-import FiltersComponent from '@/modules/code-collabo/components/Filters';
+import FiltersComponent from '@/@bbm_app/components/Filters';
 
 const ProjectsPageCodeCollabo: NextPageWithLayout = () => {
   const  { is_sm_screen }  = useScreenDimensions();

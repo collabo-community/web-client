@@ -1,15 +1,15 @@
 import { ReactElement } from 'react';
 import { useRouter } from 'next/router';
 
-import PageLayout from '@/modules/shared/components/PageLayout';
+import PageLayout from '@/@bbm_shared/components/PageLayout';
 
-import AppHomePageStructure from '@/modules/app-home/components/AppPage';
-import CodeCollaboPageStructure from '@/modules/code-collabo/components/AppPage';
+import AppHomePageStructure from '@/@bbm_community/AppPage';
+import CodeCollaboPageStructure from '@/@bbm_app/components/AppPage';
 
-import AppHome404Component from '@/modules/app-home/components/404';
-import CodeCollabo404Component from '@/modules/code-collabo/components/404';
+import AppHome404Component from '@/@bbm_community/components/404';
+import CodeCollabo404Component from '@/@bbm_app/components/404';
 
-import { useRouteraspath } from '@/modules/shared/hooks/useRouteraspath';
+import { useRouteraspath } from '@/@bbm_shared/hooks/useRouteraspath';
 
 export function GetCustom404Layout(page: ReactElement) {
   const router = useRouter();

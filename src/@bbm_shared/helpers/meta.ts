@@ -1,4 +1,4 @@
-import { capitalizeAllFirstLetters } from '@/modules/shared/helpers/transform';
+import { capitalizeAllFirstLetters } from '@/@bbm_shared/helpers/transform';
 
 const toPageTitle = (pageName: string, appName: string) => { //not exported only used in this file for now
   return `${pageName} | ${appName}`;

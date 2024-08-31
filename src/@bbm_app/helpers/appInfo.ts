@@ -1,5 +1,5 @@
-import { capitalizeAllFirstLetters, stringToUrlStart } from '@/modules/shared/helpers/transform';
-import  { AppInfo } from '@/modules/shared/helpers/types';
+import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@bbm_shared/helpers/transform';
+import  { AppInfo } from '@/@bbm_shared/helpers/types';
 
 const appName = 'code collabo';
 

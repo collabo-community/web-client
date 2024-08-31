@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/modules/code-collabo/components/AppLayout';
+import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/components/AppLayout';
 
-import overview from '@/modules/code-collabo/styles/modules/overview.module.css';
+import overview from '@/@bbm_app/styles/modules/overview.module.css';
 
 const OverviewPageCodeCollabo: NextPageWithLayout = () => {
   return (

@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
-import { getPage } from '@/modules/shared/helpers/meta';
-import { appInfo, urlStart } from '@/modules/code-collabo/helpers/appInfo';
+import { getPage } from '@/@bbm_shared/helpers/meta';
+import { appInfo, urlStart } from '@/@bbm_app/helpers/appInfo';
 
-import PageHeadElement from '@/modules/shared/components/PageHeadElement';
+import PageHeadElement from '@/@bbm_shared/components/PageHeadElement';
 
 import useToggle from '../hooks/useToggle';
 
