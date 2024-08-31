@@ -1,4 +1,4 @@
-import appHome404 from '@/@bbm_community/styles/custom404.module.css';
+import appHome404 from '@/@module_community/styles/custom404.module.css';
 
 export default function Community_404Component() {
   return (

@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getLayout_Community } from '@/@bbm_community/Community_Layout';
+import { getLayout_Community } from '@/@module_community/Community_Layout';
 
-import home from '@/@bbm_community/styles/home.module.css';
+import home from '@/@module_community/styles/home.module.css';
 
 const HomePage_Community: NextPageWithLayout = () => {
   return (

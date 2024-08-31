@@ -1,7 +1,7 @@
 import React from 'react';
-import useScreenDimensions from '@/@bbm_library/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
 
-import projects from '@/@bbm_app/styles/projects.module.css';
+import projects from '@/@module_app/styles/projects.module.css';
 
 export default function FiltersComponent() {
   const  { is_sm_screen }  = useScreenDimensions();

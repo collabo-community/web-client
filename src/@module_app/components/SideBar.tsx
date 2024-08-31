@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import useScreenDimensions from '@/@bbm_library/hooks/useScreenDimensions';
+import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
 import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
 import Overlay from './Overlay';
 

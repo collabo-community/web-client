@@ -1,5 +1,5 @@
-import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@bbm_shared/helpers/transform';
-import  { AppInfo } from '@/@bbm_shared/helpers/types';
+import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@module_shared/helpers/transform';
+import  { AppInfo } from '@/@module_shared/helpers/types';
 
 const appName = 'collabo community';
 

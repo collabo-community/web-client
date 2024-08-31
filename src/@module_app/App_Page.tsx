@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 
-import { getPage } from '@/@bbm_shared/helpers/meta';
-import { appInfo, urlStart } from '@/@bbm_app/helpers/appInfo';
+import { getPage } from '@/@module_shared/helpers/meta';
+import { appInfo, urlStart } from '@/@module_app/helpers/appInfo';
 
-import PageHeadElement from '@/@bbm_shared/components/PageHeadElement';
+import PageHeadElement from '@/@module_shared/components/PageHeadElement';
 
-import useToggle from '@/@bbm_library/hooks/useToggle';
+import useToggle from '@/@module_external/hooks/useToggle';
 
 import SM_Screen_HamburgerComponent from './components/SM_Screen_Hamburger';
 import SM_Screen_FilterComponent from './components/SM_Screen_Filter';

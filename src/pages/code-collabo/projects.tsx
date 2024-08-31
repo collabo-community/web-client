@@ -1,10 +1,10 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getLayout_App } from '@/@bbm_app/App_Layout';
+import { getLayout_App } from '@/@module_app/App_Layout';
 
-import projects from '@/@bbm_app/styles/projects.module.css';
-import useScreenDimensions from '@/@bbm_library/hooks/useScreenDimensions';
+import projects from '@/@module_app/styles/projects.module.css';
+import useScreenDimensions from '@/@module_external/hooks/useScreenDimensions';
 
-import FiltersComponent from '@/@bbm_app/components/Filters';
+import FiltersComponent from '@/@module_app/components/Filters';
 
 const ProjectsPage_App: NextPageWithLayout = () => {
   const  { is_sm_screen }  = useScreenDimensions();
