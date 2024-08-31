@@ -1,7 +1,7 @@
 import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@module_shared/helpers/transform';
 import  { AppInfo } from '@/@module_shared/helpers/types';
 
-const appName = 'code collabo';
+const appName = 'app';
 
 const urlStart = stringToUrlStart(appName);
 

@@ -15,7 +15,7 @@ import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from '.
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
   let { pathname } = useRouter();
-  pathname === urlStart ? pathname =  `${urlStart}/overview` : pathname;
+  pathname === urlStart ? pathname =  `${urlStart}/projects` : pathname;
   const { thisPage, pageTitle } = getPage(pathname, urlStart, appInfo.name);
 
   const { toggleSidebar, isSidebarOpen } = useToggle();
@@ -24,7 +24,7 @@ export default function PageStructure_App({ children }: { children: ReactNode })
     <>
       <PageHeadElement
         pageTitle={pageTitle}
-        faviconUrl='/code-collabo/favicon.ico'
+        faviconUrl='/@images_app/favicon.ico'
       />
 
       {/* MidAndUp-screens Sidebar */}

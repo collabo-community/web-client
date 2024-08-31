@@ -20,7 +20,7 @@ export default function SM_Screen_HamburgerComponent({ toggleSidebar, isCloseBtn
 
   return (
     <button className='app__mobile-menu-btns' onClick={toggleSidebar}>
-      <Image src='/code-collabo/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
+      <Image src='/@images_app/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
     </button>
   );
 }

@@ -1,9 +1,9 @@
 import { capitalizeAllFirstLetters, stringToUrlStart } from '@/@module_shared/helpers/transform';
 import  { AppInfo } from '@/@module_shared/helpers/types';
 
-const appName = 'collabo community';
+const appName = 'community';
 
-const urlStart = stringToUrlStart(appName.replace('collabo ', ''));
+const urlStart = stringToUrlStart(appName);
 
 const page: {[key: number]: string } = {
   1: 'home',

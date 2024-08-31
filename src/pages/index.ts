@@ -1,1 +1,1 @@
-export { default } from './app-home';
+export { default } from './community';

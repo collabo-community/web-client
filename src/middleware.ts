@@ -8,15 +8,15 @@ export function middleware(request: NextRequest) {
     if (url.pathname === '/') {
       url.pathname = '/';
     } else {
-      url.pathname = `/app-home${url.pathname}`;
+      url.pathname = `/community${url.pathname}`;
     }
   }
   
   if (hostname === 'app.localhost') {
     if (url.pathname === '/') {
-      url.pathname = '/code-collabo/projects';
+      url.pathname = '/app/projects';
     } else {
-      url.pathname = `/code-collabo${url.pathname}`;
+      url.pathname = `/app${url.pathname}`;
     }
   }
 

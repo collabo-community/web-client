@@ -20,7 +20,7 @@ export default function SM_Screen_FilterHamburgerComponent({ toggleFilter, isClo
 
   return (
     <button className='app__mobile-menu-btns' onClick={toggleFilter}>
-      <Image src='/code-collabo/menu.png' alt='hamburger-icon' width={25} height={25}/>
+      <Image src='/@images_app/menu.png' alt='hamburger-icon' width={25} height={25}/>
     </button>
   );
 }
