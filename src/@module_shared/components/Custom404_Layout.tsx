@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 
 import PageLayout from '@/@module_shared/components/PageLayout';
 
-import PageStructure_Community from '@/@module_community/Community_Page';
-import PageStructure_App from '@/@module_app/App_Page';
+import PageStructure_Community from '@/@layout_community/Community_Page';
+import PageStructure_App from '@/@layout_app/App_Page';
 
-import Community_404Component from '@/@module_community/components/404';
-import App_404Component from '@/@module_app/components/404';
+import Community_404Component from '@/@layout_community/components/404';
+import App_404Component from '@/@layout_app/components/404';
 
 import { useRouteraspath } from '@/@module_shared/hooks/useRouteraspath';
 
