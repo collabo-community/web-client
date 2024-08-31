@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from '@/pages/_app';
 import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/components/AppLayout';
 
-import projects from '@/@bbm_app/styles/modules/projects.module.css';
+import projects from '@/@bbm_app/styles/projects.module.css';
 import useScreenDimensions from '@/@bbm_app/hooks/useScreenDimensions';
 
 import FiltersComponent from '@/@bbm_app/components/Filters';

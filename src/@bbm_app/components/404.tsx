@@ -1,4 +1,4 @@
-import firstApp404 from '@/@bbm_app/styles/modules/custom404.module.css';
+import firstApp404 from '@/@bbm_app/styles/custom404.module.css';
 
 export default function App_Custom404Component() {
   return (
