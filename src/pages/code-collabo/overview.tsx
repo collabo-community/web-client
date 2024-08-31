@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '@/pages/_app';
-import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/components/AppLayout';
+import { getCodeCollaboSubCommunityLayout } from '@/@bbm_app/AppLayout';
 
 import overview from '@/@bbm_app/styles/overview.module.css';
 

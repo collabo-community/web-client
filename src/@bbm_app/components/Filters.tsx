@@ -1,5 +1,5 @@
 import React from 'react';
-import useScreenDimensions from '../hooks/useScreenDimensions';
+import useScreenDimensions from '@/@bbm_library/hooks/useScreenDimensions';
 
 import projects from '@/@bbm_app/styles/projects.module.css';
 

@@ -6,11 +6,11 @@ import { appInfo, urlStart } from '@/@bbm_app/helpers/appInfo';
 
 import PageHeadElement from '@/@bbm_shared/components/PageHeadElement';
 
-import useToggle from '../hooks/useToggle';
+import useToggle from '@/@bbm_library/hooks/useToggle';
 
-import SM_Screen_HamburgerComponent from './SM_Screen_Hamburger';
-import SM_Screen_FilterComponent from './SM_Screen_Filter';
-import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from './SideBar';
+import SM_Screen_HamburgerComponent from './components/SM_Screen_Hamburger';
+import SM_Screen_FilterComponent from './components/SM_Screen_Filter';
+import { MidAndUp_Screens_SideBarComponent, SM_Screen_SideBarComponent } from './components/SideBar';
 
 
 export default function PageStructure({ children }: { children: ReactNode }) {

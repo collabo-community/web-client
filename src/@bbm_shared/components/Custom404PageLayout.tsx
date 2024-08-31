@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import PageLayout from '@/@bbm_shared/components/PageLayout';
 
 import AppHomePageStructure from '@/@bbm_community/AppPage';
-import CodeCollaboPageStructure from '@/@bbm_app/components/AppPage';
+import CodeCollaboPageStructure from '@/@bbm_app/AppPage';
 
 import AppHome404Component from '@/@bbm_community/components/404';
 import CodeCollabo404Component from '@/@bbm_app/components/404';
