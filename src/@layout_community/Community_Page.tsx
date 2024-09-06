@@ -13,7 +13,7 @@ export default function PageStructure_Community({ children }: { children: ReactN
     <>
       <PageHeadElement
         pageTitle={pageTitle}
-        faviconUrl=''
+        faviconUrl='/@images_community/favicon.ico'
       />
       <header className='header-test'>
         <nav>
