@@ -18,6 +18,8 @@ export function middleware(request: NextRequest) {
     } else {
       url.pathname = `/@pages_app${url.pathname}`;
     }
+  } else {
+    url.pathname = '/404';
   }
 
   return NextResponse.rewrite(url);
