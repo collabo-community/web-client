@@ -18,7 +18,10 @@ export function middleware(request: NextRequest) {
     } else {
       url.pathname = `/@pages_app${url.pathname}`;
     }
-  } else {
+  }
+
+  // Handle unknown subdomains by redirecting to community home page's 404 page
+  if (hostname !== 'localhost' && hostname !== 'app.localhost') {
     url.pathname = '/404';
   }
 
