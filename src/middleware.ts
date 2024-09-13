@@ -20,6 +20,11 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Handle unknown subdomains by redirecting to community home page's 404 page
+  if (hostname !== 'localhost' && hostname !== 'app.localhost') {
+    url.pathname = '/404';
+  }
+
   return NextResponse.rewrite(url);
 }
 
