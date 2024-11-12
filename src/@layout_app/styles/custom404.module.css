@@ -1,8 +1,0 @@
-/* CODE-COLLABO SUBCOMMUNITY only */
-/* For css specific to only 404 page */
-/* Imported as firstApp404 into the custom404 component when we need it */
-
-.test {
-    background: var(--color-error-200);
-    color: var(--color-shade-white);
-}

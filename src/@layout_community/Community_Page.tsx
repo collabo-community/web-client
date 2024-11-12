@@ -15,7 +15,7 @@ export default function PageStructure_Community({ children }: { children: ReactN
         pageTitle={pageTitle}
         faviconUrl='/@images_community/favicon.ico'
       />
-      <header className='header-test'>
+      <header>
         <nav>
           <h1>{appInfo.name} App [{thisPage}]</h1>
         </nav>
