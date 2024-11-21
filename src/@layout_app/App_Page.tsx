@@ -6,6 +6,10 @@ import { appInfo } from '@/@layout_app/helpers/appInfo';
 
 import PageHeadElement from '@/@layout_shared/components/PageHeadElement';
 
+import styles from './styles/app_page.module.css';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
   const { pathname } = useRouter();
@@ -17,11 +21,18 @@ export default function PageStructure_App({ children }: { children: ReactNode })
         pageTitle={pageTitle}
         faviconUrl='/@images_app/favicon.ico'
       />
-      {/* Sidebar and header was here */}
-      <>Sidebar and Header Content</>
-      <main>
-        { children }
-      </main>
+
+      <div className={styles.layout}>
+        <Sidebar />
+        <div className={styles.appContainer}>
+          <div  className={styles.mainContent}>
+            <Header />
+            <main className={styles.main}>
+              { children }
+            </main>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

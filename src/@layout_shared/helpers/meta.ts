@@ -1,10 +1,10 @@
 import { capitalizeAllFirstLetters, getLastIndexOfCharaterInString } from '@/@layout_shared/helpers/transform';
 
-const toPageTitle = (pageName: string, layoutName: string) => { //not exported only used in this file for now
-  return `${pageName} | ${layoutName}`;
+const toPageTitle = (pageName: string, layoutName: string | undefined) => { //not exported only used in this file for now
+  return layoutName ? `${pageName} | ${layoutName}` : pageName;
 };
 
-const getPage = ({ pathname, layoutName }: { pathname: string; layoutName: string }) => {
+const getPage = ({ pathname, layoutName }: { pathname: string; layoutName?: string | undefined }) => {
   /*---------------------------------------------------------------
   For pages inside of @pages_community, change pathname accordingly
   if pathname says '/'

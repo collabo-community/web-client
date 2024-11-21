@@ -1,11 +1,11 @@
 import { NextPageWithLayout } from '@/pages/_app';
 import { getLayout_App } from '@/@layout_app/App_Layout';
+import ProjectList from '@/@layout_app/components/ProjectList';
 
 const ProjectsPage_App: NextPageWithLayout = () => {
   return (
     <>
-      {/* project page content was here */}
-      <div>Project Page content area</div>
+      <ProjectList />
     </>
   );
 };
