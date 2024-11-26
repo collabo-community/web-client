@@ -9,6 +9,7 @@ import PageHeadElement from '@/@layout_shared/components/PageHeadElement';
 import styles from './styles/app_page.module.css';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import Image from 'next/image';
 
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
@@ -26,6 +27,9 @@ export default function PageStructure_App({ children }: { children: ReactNode })
         <Sidebar />
         <div className={styles.appContainer}>
           <div  className={styles.mainContent}>
+            <button className={styles.app__mobileMenuBtns}>
+              <Image src='/@images_app/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
+            </button>
             <Header />
             <main className={styles.main}>
               { children }

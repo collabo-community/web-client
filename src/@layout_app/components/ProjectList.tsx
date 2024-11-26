@@ -3,25 +3,25 @@ import styles from '../../@layout_app/styles/project_page.module.css';
 
 const dummyData = [
   {
-    id: Date.now(),
+    id: 1,
     title: 'Node Mongo',
     projectsCount: 3,
     imgSrc: '/@images_app/node-mongo.svg',
   },
   {
-    id: Date.now(),
+    id: 2,
     title: 'Collabocate',
     projectsCount: 5,
     imgSrc: '/@images_app/project-4.svg',
   },
   {
-    id: Date.now(),
+    id: 3,
     title: 'Building Blocks',
     projectsCount: 2,
     imgSrc: '/@images_app/project-2.svg',
   },
   {
-    id: Date.now(),
+    id: 4,
     title: 'Use-me-for-experement',
     projectsCount: 4,
     imgSrc: '@images_app/project-3.svg',

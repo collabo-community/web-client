@@ -20,11 +20,15 @@ export default function ProjectCard({
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image style={{ width: '100%'}} src={imageSrc} alt={altText} width={150} height={150} />
+        <Image className={styles.img} src={imageSrc} alt={altText} width={150} height={150} loading="lazy" />
+        <div className={styles.contentMobile}>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.projectsCount}>{projectsCount} projects</p>
+        </div>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.content}>
-          <h3 className={styles.title}>{title}</h3>
+          <h2 className={styles.title}>{title}</h2>
           <p className={styles.projectsCount}>{projectsCount} projects</p>
         </div>
         <button className={styles.button}>{buttonText}</button>

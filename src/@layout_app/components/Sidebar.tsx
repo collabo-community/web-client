@@ -9,7 +9,7 @@ export default function Sidebar() {
     { path: '/overview', label: 'Overview', icon: '/@images_app/dashboard.png' },
     { path: '/', label: 'Projects', icon: '/@images_app/project-icon.png' },
     { path: '/careers', label: 'Careers', icon:'/@images_app/career-icon.png' },
-    { path: '/donate', label: 'Donate', icon:'/@images_app/donate.png' },
+    { path: '/donates', label: 'Donate', icon:'/@images_app/donate.png' },
   ];
 
   return (

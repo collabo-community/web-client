@@ -1,77 +1,94 @@
+/* smaller screen */
 .sidebar {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  border-right: 1px solid #889199;
-  color: black;
-  padding: 50px 0;
+  display: none;
 }
 
-.navlink {
-  display: block;
-  text-decoration: none;
-  padding: 15px 0px;
-  margin-bottom: 24px;
-  border-radius: 10px;
-  background-color: #FDFDFD;
-  color: #121518;
-}
-
-.navlink:hover {
-  display: block;
-  text-decoration: none;
-  padding: 15px 0px;
-  margin-bottom: 24px;
-  border-radius: 10px;
-  background-color: #ECF6FF;
-  color: #0275D8;
-}
-
-.active {
-  display: block;
-  text-decoration: none;
-  padding: 15px 0px;
-  margin-bottom: 24px;
-  border-radius: 10px;
-  background-color: #0275D8;
-  color: white;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 82px;
+.menuitems{
+  width: calc(100% - 30px);
 }
 
 .navlinkitems {
-  display: flex;
-  font-size: 18px;
-  align-items: center;
-  font-weight: 700;
-  margin: 0 auto;
-  width: 70%;
-  gap: 30px;
+  gap: 18px;
+  font-size: 14px;
 }
 
-.menuitems {
-  margin: 0 auto;
-  gap: 10px;
-  width: calc(100% - 60px);
-}
-
-/* mobile */
-@media (max-width: 768px) {
+/* large screen */
+@media screen and (min-width: 768px) {
   .sidebar {
-    flex: 2
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+    border-right: 1px solid #889199;
+    color: black;
+    padding: 50px 0;
+  }
+  
+  .navlink {
+    display: block;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: #FDFDFD;
+    color: #121518;
+  }
+  
+  .navlink:hover {
+    display: block;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: #ECF6FF;
+    color: #0275D8;
+  }
+  
+  .active {
+    display: block;
+    text-decoration: none;
+    padding: 15px 0px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: #0275D8;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 82px;
+  }
+  
+  .navlinkitems {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 70%;
+    gap: 18px;
+  }
+  
+  .menuitems {
+    margin: 0 auto;
+    gap: 10px;
+    width: calc(100% - 30px);
+  }
+}
+
+/* larger screen */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    flex: 1.2
   }
   .menuitems{
-    width: calc(100% - 30px);
+    width: calc(100% - 60px);
   }
 
   .navlinkitems {
-    gap: 18px;
-    font-size: 14px;
-  }
+    gap: 30px;
+    font-size: 18px;
+  } 
 }

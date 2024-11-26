@@ -1,13 +1,16 @@
+/* smaller screen */
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  justify-content: space-between;
+  grid-template-columns: 1fr;
+  gap: 20px;
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+/* Large screen */
+@media screen and (min-width: 1024px) {
   .cardGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 40px;
   }
 }
