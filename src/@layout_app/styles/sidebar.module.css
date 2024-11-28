@@ -1,80 +1,101 @@
 /* smaller screen */
 .sidebar {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: -500px; /* Hide the sidebar off-screen initially */
+  width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: 0px 0px 30px 5px #0275D80D;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.navlink {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #FDFDFD;
+  color: #121518;
+}
+
+.navlink:hover {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #ECF6FF;
+  color: #0275D8;
+}
+
+.active {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background-color: #0275D8;
+  color: white;
+}
+
+.logo {
+  margin-bottom: 50px;
 }
 
 .menuitems{
-  width: calc(100% - 30px);
+  margin: 0 auto;
+  width: calc(100% - 60px);
 }
 
 .navlinkitems {
-  gap: 18px;
+  display: flex;
   font-size: 14px;
+  align-items: center;
+  font-weight: 700;
+  margin: 0 auto;
+  width: 70%;
+  gap: 18px;
+}
+
+.sidebarOpen {
+  left: 0; /* Slide into view */
+}
+
+.sidebar_toggleclose {
+  text-align: right;
+  margin: 0 auto;
+  width: calc(100% - 60px);
+  background-color: transparent;
 }
 
 /* large screen */
 @media screen and (min-width: 768px) {
   .sidebar {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: static; /* Normal position for larger screens */
+    left: 0;
+    width: auto;
+    box-shadow: none;
     flex: 2;
     border-right: 1px solid #889199;
-    color: black;
-    padding: 50px 0;
-  }
-  
-  .navlink {
-    display: block;
-    text-decoration: none;
-    padding: 15px 0px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    background-color: #FDFDFD;
-    color: #121518;
-  }
-  
-  .navlink:hover {
-    display: block;
-    text-decoration: none;
-    padding: 15px 0px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    background-color: #ECF6FF;
-    color: #0275D8;
-  }
-  
-  .active {
-    display: block;
-    text-decoration: none;
-    padding: 15px 0px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    background-color: #0275D8;
-    color: white;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 82px;
-  }
-  
-  .navlinkitems {
-    display: flex;
-    font-size: 14px;
-    align-items: center;
-    font-weight: 700;
-    margin: 0 auto;
-    width: 70%;
-    gap: 18px;
+    justify-content: start;
+    padding: 0;
   }
   
   .menuitems {
-    margin: 0 auto;
     gap: 10px;
     width: calc(100% - 30px);
+  }
+
+  .logo {
+    margin-bottom: 82px;
   }
 }
 

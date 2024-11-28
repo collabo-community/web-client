@@ -1,0 +1,50 @@
+
+
+.sideMenubarFilter {
+  margin: 0 auto;
+  gap: 20px;
+  width: calc(100% - 100px);
+
+  /* Stack content on top of each other */
+  display: flex;
+  flex-direction: column;
+}
+
+.selectElem {
+  padding: 13px 26px;
+  background: var(--color-neutral-100);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.filterbyText {
+  display: block;
+  margin: 70px auto 20px auto;
+  width: fit-content;
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 600px) {
+  .filterContainer {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+  }
+
+  .cardsArea {
+    width: calc(100% - 10px);
+    padding: 40px 0 65px 0;
+  }
+
+  .paginationArea {
+    width: fit-content;
+    padding: 8px;
+  }
+
+  /* Temporary styles? */
+  .select_elem {
+    padding: 13px 26px;
+    margin-left: 10px;
+    width: unset;
+  }
+}

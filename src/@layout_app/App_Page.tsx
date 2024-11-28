@@ -10,11 +10,17 @@ import styles from './styles/app_page.module.css';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Image from 'next/image';
+import useToggle from '@/@library_external/hooks/useToggle';
+import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
+import Overlay from './components/Overlay';
 
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
   const { pathname } = useRouter();
   const { pageTitle } = getPage({ pathname, layoutName: appInfo.name });
+
+  const { toggleSidebar, isSidebarOpen } = useToggle();
+  const { is_sm_screen }  = useScreenDimensions();
 
   return (
     <>
@@ -24,13 +30,19 @@ export default function PageStructure_App({ children }: { children: ReactNode })
       />
 
       <div className={styles.layout}>
-        <Sidebar />
+        <Overlay is_sm_screen={is_sm_screen}  isSidebarOpen={isSidebarOpen} toggle={toggleSidebar}/>
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div className={styles.appContainer}>
           <div  className={styles.mainContent}>
-            <button className={styles.app__mobileMenuBtns}>
-              <Image src='/@images_app/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
-            </button>
-            <Header />
+            <div className={styles.app_header}>
+              <button className={styles.app__mobileMenuBtns} onClick={toggleSidebar}>
+                <Image src='/@images_app/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
+              </button>
+              <Header />
+              <button className={styles.app__mobileMenuBtns}>
+                <Image src='/@images_app/menu.png' alt='hamburger-icon' width={25} height={25}/>
+              </button>
+            </div>
             <main className={styles.main}>
               { children }
             </main>

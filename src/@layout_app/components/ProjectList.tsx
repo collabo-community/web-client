@@ -26,8 +26,18 @@ const dummyData = [
     projectsCount: 4,
     imgSrc: '@images_app/project-3.svg',
   },
-
-
+  {
+    id: 5,
+    title: 'Nimbles',
+    projectsCount: 5,
+    imgSrc: '@images_app/project-3.svg',
+  },
+  {
+    id: 6,
+    title: 'NimbleShop',
+    projectsCount: 4,
+    imgSrc: '@images_app/project-3.svg',
+  }
 ];
 
 

@@ -14,7 +14,27 @@
 .app__mobileMenuBtns {
   display: block;
   border-radius: 50%;
+  width: 56px;
+  height: 56px;
   padding: 16px;
+  background: white;
+  box-shadow: 5px 5px 15px 0px #0275D81A;
+}
+
+.app_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__menuOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 13, 19, 0.8);
+  z-index: 998; 
 }
 
 @media screen and (min-width: 768px) {
@@ -25,7 +45,7 @@
 
   .appContainer {
     flex: 4;
-    padding: 50px 0;
+    padding: 0  0 50px 0;
   }
   
   .mainContent {

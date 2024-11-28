@@ -1,4 +1,11 @@
 /* smaller screen */
+.projectPageContainer {
+ display: flex;
+ flex-direction: column;
+ gap: 40px;
+}
+
+/* project list styles */
 .cardGrid {
   display: grid;
   grid-template-columns: 1fr;
