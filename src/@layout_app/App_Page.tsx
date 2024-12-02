@@ -7,19 +7,19 @@ import { appInfo } from '@/@layout_app/helpers/appInfo';
 import PageHeadElement from '@/@layout_shared/components/PageHeadElement';
 
 import styles from './styles/app_page.module.css';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import Image from 'next/image';
 import useToggle from '@/@library_external/hooks/useToggle';
 import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
-import Overlay from './components/Overlay';
+import SM_Screen_HamburgerComponent from './components/SM_Screen_Hamburger';
+import SidebarWithOverlay from './components/SidebarWithOverlay';
+import FilterSidebarWithOverlay from './components/FilterSiderbarWithOverlay';
 
 
 export default function PageStructure_App({ children }: { children: ReactNode }) {
   const { pathname } = useRouter();
   const { pageTitle } = getPage({ pathname, layoutName: appInfo.name });
 
-  const { toggleSidebar, isSidebarOpen } = useToggle();
+  const { toggleSidebar, isSidebarOpen, toggleFilter, isFilterOpen } = useToggle();
   const { is_sm_screen }  = useScreenDimensions();
 
   return (
@@ -30,18 +30,24 @@ export default function PageStructure_App({ children }: { children: ReactNode })
       />
 
       <div className={styles.layout}>
-        <Overlay is_sm_screen={is_sm_screen}  isSidebarOpen={isSidebarOpen} toggle={toggleSidebar}/>
-        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <SidebarWithOverlay
+          isOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+          is_sm_screen={is_sm_screen}
+        />
         <div className={styles.appContainer}>
           <div  className={styles.mainContent}>
             <div className={styles.app_header}>
-              <button className={styles.app__mobileMenuBtns} onClick={toggleSidebar}>
-                <Image src='/@images_app/hamburger.png' alt='hamburger-icon' width={25} height={25}/>
-              </button>
+              <SM_Screen_HamburgerComponent
+                toggleSidebar={toggleSidebar}
+              />
               <Header />
-              <button className={styles.app__mobileMenuBtns}>
-                <Image src='/@images_app/menu.png' alt='hamburger-icon' width={25} height={25}/>
-              </button>
+              <FilterSidebarWithOverlay
+                pathname={pathname}
+                isOpen={isFilterOpen}
+                toggleFilter={toggleFilter}
+                is_sm_screen={is_sm_screen}
+              />
             </div>
             <main className={styles.main}>
               { children }

@@ -18,7 +18,7 @@
 .navlink {
   display: block;
   text-decoration: none;
-  padding: 15px 0px;
+  padding: 17px 0px;
   margin-bottom: 24px;
   border-radius: 10px;
   background-color: #FDFDFD;
@@ -28,7 +28,7 @@
 .navlink:hover {
   display: block;
   text-decoration: none;
-  padding: 15px 0px;
+  padding: 17px 0px;
   margin-bottom: 24px;
   border-radius: 10px;
   background-color: #ECF6FF;
@@ -38,7 +38,7 @@
 .active {
   display: block;
   text-decoration: none;
-  padding: 15px 0px;
+  padding: 17px 0px;
   margin-bottom: 24px;
   border-radius: 10px;
   background-color: #0275D8;
@@ -79,7 +79,7 @@
 @media screen and (min-width: 768px) {
   .sidebar {
     height: 100vh;
-    position: static; /* Normal position for larger screens */
+    position: static;
     left: 0;
     width: auto;
     box-shadow: none;

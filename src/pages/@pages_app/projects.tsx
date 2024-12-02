@@ -4,13 +4,16 @@ import ProjectList from '@/@layout_app/components/ProjectList';
 import FiltersComponent from '@/@layout_app/components/FiltersComponent';
 
 import styles from '@/@layout_app/styles/project_page.module.css';
-import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
+// import useScreenDimensions from '@/@library_external/hooks/useScreenDimensions';
+import useToggle from '@/@library_external/hooks/useToggle';
+// import Overlay from '@/@layout_app/components/Overlay';
 
 const ProjectsPage_App: NextPageWithLayout = () => {
-  const  { is_midAndUp_screens }  = useScreenDimensions();
+  // const  { is_sm_screen }  = useScreenDimensions();
+  const { isFilterOpen, toggleFilter } = useToggle();
   return (
     <div className={styles.projectPageContainer}>
-      {is_midAndUp_screens && <FiltersComponent />}
+      <FiltersComponent toggleFilter={toggleFilter} isOpen={isFilterOpen} />
       <ProjectList />
       {/* Pagination component here */}
     </div>

@@ -3,6 +3,7 @@ import useScreenDimensions from '../../@library_external/hooks/useScreenDimensio
 import Image from 'next/image';
 
 import styles from '../styles/app_page.module.css';
+import sidebarstyle from '../styles/sidebar.module.css';
 
 export default function SM_Screen_HamburgerComponent({ toggleSidebar, isCloseBtn }: { toggleSidebar?: () => void; isCloseBtn?: boolean; }) {
   const  { is_midAndUp_screens }  = useScreenDimensions();
@@ -14,8 +15,8 @@ export default function SM_Screen_HamburgerComponent({ toggleSidebar, isCloseBtn
   // The "isCloseBtn" prop/style for singling out close button helps achieve this
   if (isCloseBtn) {
     return (
-      <button className={styles.app__mobileMenuBtns} onClick={toggleSidebar}>
-        <Image src='/@images_app/menu.png' alt='menu-icon' width={25} height={25}/>
+      <button className={sidebarstyle.sidebar_toggleclose} onClick={toggleSidebar}>
+        <Image  src='/@images_app/close-icon.svg' alt='close-icon' width={25} height={25}/>
       </button>
     );
   }
