@@ -1,8 +1,7 @@
+import ErrorComponent from './ErrorComponent';
 
 export default function App_404Component() {
   return (
-    <>
-      <h1>Code Collabo Subcommunity 404 page content</h1>
-    </>
+    <ErrorComponent img='/@images_app/404-collabo.svg' errorMesssage='Sorry, we couldn’t find the page you requested' />
   );
 }

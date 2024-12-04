@@ -1,0 +1,45 @@
+.noContentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.noContentContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noContentImage {
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subText {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.34px;
+  text-align: center;
+  color: #889199;
+  margin-bottom: 50px;
+  width: 350px
+}
+
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    color: #121518;
+  }
+
+  .subText {
+    font-size: 16px;
+    line-height: 21.79px;
+  }
+}

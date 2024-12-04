@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/project_card.module.css';
 import Image from 'next/image';
+import Button from './Button';
 
 interface CardProps {
   title: string;
@@ -31,7 +32,7 @@ export default function ProjectCard({
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.projectsCount}>{projectsCount} projects</p>
         </div>
-        <button className={styles.button}>{buttonText}</button>
+        <Button className={styles.button} text={buttonText}/>
       </div>
     </div>
 

@@ -9,7 +9,7 @@ export default function Header() {
   const { pageTitle } = getPage({ pathname });
   return (
     <header>
-      <h1>{pageTitle}</h1>
+      <h1>{pageTitle !== '404' ? pageTitle : ''}</h1>
     </header>
   );
 }
