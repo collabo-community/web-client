@@ -7,24 +7,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "esw src --ext .js,.ts,.jsx,.tsx --color",
-    "lint:watch": "npm run lint -- '**/*.{js,ts,jsx,tsx}' --watch"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.5.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "next": "^15.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4",
-    "eslint-watch": "^8.0.0",
-    "typescript": "^5"
+    "eslint-config-next": "15.0.4"
   },
   "homepage": "https://github.com/collabo-community/web-client#readme",
   "repository": {
@@ -36,5 +32,7 @@
   },
   "author": "Collabo Community [Code Collabo]",
   "license": "AGPL v3.0",
-  "contributors": ["Find list of contributors in project README: https://github.com/collabo-community/web-client?tab=readme-ov-file#contributors"]
+  "contributors": [
+    "Find list of contributors in project README: https://github.com/collabo-community/web-client?tab=readme-ov-file#contributors"
+  ]
 }
