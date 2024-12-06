@@ -30,9 +30,7 @@
   "bugs": {
     "url": "https://github.com/collabo-community/issue-tickets-ready-for-fixing/issues"
   },
-  "author": "Collabo Community [Code Collabo]",
+  "author": "Collabo Community",
   "license": "AGPL v3.0",
-  "contributors": [
-    "Find list of contributors in project README: https://github.com/collabo-community/web-client?tab=readme-ov-file#contributors"
-  ]
+  "contributors": ["Find list of contributors in project README: https://github.com/collabo-community/web-client?tab=readme-ov-file#contributors"]
 }
